@@ -1,0 +1,79 @@
+name: Shadow Credentials Added to Account
+id: 0xFF-0275-Shadow_Credentials_Added_to_Account-Win
+tags:
+  - ActiveDirectory
+  - SuspiciousBehavior
+os_family:
+  - WindowsEndpoint
+  - WindowsServer
+fp_rate: Low
+severity: Medium
+attack:
+  - {tactic: 'TA0004', technique: T1484}
+  - {tactic: 'TA0003', technique: T1098}
+data_sources:
+  - provider: SecurityEvents
+    event_id: '5136'
+    table_name: SecurityEvent
+    attack_data_source: Active Directory
+    attack_data_component: Active Directory Object Modification
+permission_required: Administrator
+technical_description: >
+  This query searches for modifications to the 'msDS-KeyCredentialLink' property in Active Directory, introduced in Windows Server 2016.
+  There are two different events which contain information to detect such changes 5136 and 4662. This detection uses the
+  5136, which is the preferred event to use.
+description: >
+  Windows Hello for Business (WHfB) supports multi-factor passwordless authentication. When the user or computer enrolls, the TPM generates a public-private key pair for the relevant account. The public key is stored in a new Key Credential object in the msDS-KeyCredentialLink attribute of the account. When a client logs in, Windows attempts to perform PKINIT authentication using their private key. Under the Key Trust model, the Domain Controller can decrypt their pre-authentication data using the raw public key in the corresponding NGC object stored in the client's msDS-KeyCredentialLink attribute.
+  Attackers can abuse this property to gain local administrator access to a computer. Various attack tools such as Whisker, DSInternals and ntlmrelayx include functionality to modify this property.
+considerations: |
+  This query requires event 5136 to be enabled to audit Active Directory object modifications. This attack can also be detected with
+  event 4662, which is an alternative option. Detecting this attack with event 4662 is a backup strategy in case 5136 is not available
+  in your environment.
+
+  To enable this event two steps are required:
+  * Enable 'Active Directory Service changes' under the 'Advanced Audit Policy configuration' in the 'DS Access' section.
+  * Enable a SACL for 'Write all properties' under the 'Advanced, Auditing' section of the domain in the 'Active Directory Users and Computers' tool.
+  A full explanation of these steps is available at https://morgantechspace.com/2013/11/event-id-5136-ad-object-change-audit-event.html
+false_positives: >
+  The property can also be used for legitimate purposes. However, the legitimate use of the property is limited in most environments.
+blindspots: >
+  Accounts changing their own 'msDS-KeyCredentialLink' property are excluded from this detection rule,
+  since this behavior periodically happens for legitimate purposes, e.g., when updating Windows Hello for Business [WHfB] certificates.
+  As a result, abusing this issue with an NTLM relay attack would not trigger this rule.
+response_plan: >
+  Investigate the source of the update to the 'msDS-KeyCredentialLink' property. The SubjectUserName indicates which user has changed this
+  field. Use this together with the SubjectLogonId to identify from which machine this potential attack has been performed. Once the machine is found,
+  investigate the process which triggered this behavior and try to find a reason why this has happend.
+
+  Also, consider the OperationType. This column provides a mapping of all operation types: https://gist.github.com/brianreitz/d5b9397a2e8b3d52ceb9359897e07c3f.
+references:
+  - https://morgantechspace.com/2013/11/event-id-5136-ad-object-change-audit-event.html
+  - https://posts.specterops.io/shadow-credentials-abusing-key-trust-account-mapping-for-takeover-8ee1a53566ab
+  - https://github.com/ShutdownRepo/pywhisker
+  - https://github.com/MichaelGrafnetter/DSInternals
+change_log:
+  - {version: '1.2', date: '2023-01-30', impact: minor, message: Added more details to the response plan.}
+  - {version: '1.1', date: '2022-06-17', impact: minor, message: "Improved rule logic to not rely on fixed indexes in the EventData."}
+  - {version: '1.0', date: '2022-04-20', impact: major, message: Initial version.}
+detection_query:
+  language: Kusto
+  platform: Sentinel
+  deployment_variables:
+    query_frequency: PT1H
+    entity_mapping:
+      - Host:
+          FullName: Computer
+      - Account:
+          FullName: Account
+  query: |
+    let timeframe = 2*1h;
+    SecurityEvent
+    | where ingestion_time() >= ago(timeframe)
+    | where EventID == 5136
+    | extend AttributeName = extract("<Data Name=\"AttributeLDAPDisplayName\">(.*?)</Data>", 1, EventData)
+    | extend ObjectDN = extract("<Data Name=\"ObjectDN\">(.*?)</Data>", 1, EventData)
+    | extend SubjectUserName = extract("<Data Name=\"SubjectUserName\">(.*?)</Data>", 1, EventData)
+    | where AttributeName contains "msDS-KeyCredentialLink"
+    | where not(SubjectUserName endswith "$" and ObjectDN startswith strcat("CN=", replace_string(SubjectUserName, "$", ""), ",")) // Machine account changing its own msDS-KeyCredentialLink.
+    // Begin client-specific filter.
+    // End client-specific filter.

@@ -1,0 +1,1225 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum":[
+          "BoosterPack",
+          "FalconFriday",
+          "BasedOnMicrosoftPublic",
+          "BasedOnSigma",
+          "AzureAD",
+          "ServicePrincipalPermissions",
+          "LOLBIN",
+          "DefenderForO365",
+          "Phishing",
+          "ActiveDirectory",
+          "OfficeAbuse",
+          "Plugins",
+          "SuspiciousBinaries",
+          "Services",
+          "Registry",
+          "DisableSecurity",
+          "Escalations",
+          "SpecificIoC",
+          "SuspiciousBehavior",
+          "SuspiciousNetworkTraffic",
+          "Baselined",
+          "Hygiene",
+          "SMB",
+          "CredentialDumping",
+          "Proxy",
+          "WMI",
+          "LAPS",
+          "ProcessGenealogy",
+          "Certificates",
+          "Kerberos",
+          "RDP",
+          "ProcessInjection",
+          "ScheduledTasks",
+          "CobaltStrike",
+          "MFA",
+          "Drivers",
+          "ASR",
+          "COM",
+          "Exchange",
+          "Webserver",
+          "DNS",
+          "C2",
+          "AzurePlatform",
+          "LateralMovement",
+          "DLLHijacking",
+          "ADCS",
+          "AWS",
+          "Untuned",
+          "Linux",
+          "UACBypass",
+          "SAP",
+          "SQL Server",
+          "Honey",
+          "SharePoint",
+          "Thycotic",
+          "SailPoint",
+          "Salesforce",
+          "Fortinet",
+          "CustomizationRequired",
+          "CustomerSpecific",
+          "Indicator",
+          "RequiresCustomSACL"
+        ]
+      }
+    },
+    "os_family": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "WindowsEndpoint",
+          "WindowsServer",
+          "MacOS",
+          "Linux",
+          "N/A",
+          "Azure"
+        ]
+      }
+    },
+    "fp_rate": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ]
+    },
+    "attack": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tactic": {
+            "type": "string"
+          },
+          "technique": {
+            "type": "string"
+          },
+          "sub_technique": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "tactic",
+          "technique"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "data_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "AIVectraDetect",
+              "AIVectraStream",
+              "AWS",
+              "AWSS3",
+              "Agari",
+              "AkamaiSecurityEvents",
+              "AlcideKAudit",
+              "AlsidForAD",
+              "Armorblox",
+              "ApacheHTTPServer",
+              "ApacheTomcat",
+              "ARGOSCloudSecurity",
+              "AristaAwakeSecurity",
+              "ASimDnsActivityLogs",
+              "ArubaClearPass",
+              "AzureActiveDirectory",
+              "AzureActiveDirectoryIdentityProtection",
+              "AzureActivity",
+              "AzureAdvancedThreatProtection",
+              "AzureFirewall",
+              "AzureInformationProtection",
+              "AzureKeyVault",
+              "AzureKubernetes",
+              "AzureMonitor(IIS)",
+              "AzureMonitor(VMInsights)",
+              "AzureMonitor(WireData)",
+              "AzureNSG",
+              "AzureSecurityCenter",
+              "AzureSql",
+              "AzureStorageAccount",
+              "Barracuda",
+              "BarracudaCloudFirewall",
+              "BetterMTD",
+              "BehaviorAnalytics",
+              "BeyondSecuritybeSECURE",
+              "Bitglass",
+              "BlackberryCylancePROTECT",
+              "BoschAIShield",
+              "BoxDataConnector",
+              "BroadcomSymantecDLP",
+              "CEF",
+              "CheckPoint",
+              "CiscoASA",
+              "CiscoDuoSecurity",
+              "CiscoFirepowerEStreamer",
+              "CiscoISE",
+              "CiscoMeraki",
+              "CiscoSecureEndpoint",
+              "CiscoSEG",
+              "CiscoUCS",
+              "CiscoUmbrellaDataConnector",
+              "CiscoWSA",
+              "Citrix",
+              "CitrixWAF",
+              "Claroty",
+              "CloudflareDataConnector",
+              "CognniSentinelDataConnector",
+              "ContrastProtect",
+              "Corelight",
+              "CrowdStrikeFalconEndpointProtection",
+              "CyberArk",
+              "CyberArkEPM",
+              "CyberpionSecurityLogs",
+              "DDOS",
+              "DNS",
+              "Darktrace",
+              "DarktraceRESTConnector",
+              "DigitalGuardianDLP",
+              "DigitalShadows",
+              "Dynamics365",
+              "ESETEnterpriseInspector",
+              "ESETPROTECT",
+              "EsetSMC",
+              "ExtraHopNetworks",
+              "F5",
+              "F5BigIp",
+              "ForcepointCasb",
+              "ForcepointDlp",
+              "ForcepointNgfw",
+              "ForgeRock",
+              "Fortinet",
+              "GCPDNSDataConnector",
+              "GWorkspaceRAPI",
+              "GoogleWorkspaceReportsAPI",
+              "ImpervaWAFCloudAPI",
+              "ImpervaWAFGateway",
+              "ImportedConnector",
+              "InfobloxCloudDataConnector",
+              "InfobloxNIOS",
+              "IoT",
+              "JiraAuditAPI",
+              "JuniperSRX",
+              "LastPass",
+              "LookoutAPI",
+              "McAfeeePO",
+              "MicrosoftAzurePurview",
+              "MicrosoftCloudAppSecurity",
+              "MicrosoftDefenderAdvancedThreatProtection",
+              "MicrosoftSysmonForLinux",
+              "MicrosoftThreatProtection",
+              "MorphisecUTPP",
+              "NXLogDnsLogs",
+              "NXLogLinuxAudit",
+              "Netskope",
+              "Office365",
+              "OfficeATP",
+              "OktaSSO",
+              "OnapsisPlatform",
+              "OneIdentity",
+              "OCILogs",
+              "OracleDatabaseAudit",
+              "OracleCloudInfrastructureLogsConnector",
+              "OracleWebLogicServer",
+              "OrcaSecurityAlerts",
+              "PaloAltoCDL",
+              "PaloAltoNetworks",
+              "PaloAltoPrismaCloud",
+              "Perimeter81ActivityLogs",
+              "PingFederate",
+              "PostgreSQL",
+              "ProofpointPOD",
+              "ProofpointTAP",
+              "PulseConnectSecure",
+              "QualysKB",
+              "QualysVulnerabilityManagement",
+              "RedCanaryDataConnector",
+              "SailPointIdentityNow",
+              "SalesforceServiceCloud",
+              "SecurityEvents",
+              "SemperisDSP",
+              "SenservaPro",
+              "SentinelOne",
+              "SlackAuditAPI",
+              "Snowflake",
+              "SonicWallFirewall",
+              "SonraiDataConnector",
+              "SophosCloudOptix",
+              "SophosXGFirewall",
+              "SquadraTechnologiesSecRmm",
+              "SquidProxy",
+              "Symantec",
+              "SymantecEndpointProtection",
+              "SymantecProxySG",
+              "SymantecVIP",
+              "Syslog",
+              "Tenable.ad",
+              "ThreatIntelligence",
+              "ThreatIntelligenceTaxii",
+              "DelineaSecretServer_CEF",
+              "TrendMicro",
+              "TrendMicroApexOne",
+              "TrendMicroCAS",
+              "TrendMicroTippingPoint",
+              "TrendMicroXDR",
+              "UbiquitiUnifi",
+              "vArmourAC",
+              "VMwareCarbonBlack",
+              "vCenter",
+              "VMwareESXi",
+              "WAF",
+              "WindowsFirewall",
+              "WindowsForwardedEvents",
+              "WireX_Systems_NFP",
+              "ZimperiumMtdAlerts",
+              "Zscaler",
+              "ZscalerPrivateAccess",
+              "illusiveAttackManagementSystem",
+              "WindowsSecurityEvents",
+              "IronNetIronDefense",
+              "GCPIAMDataConnector",
+              "Illusive",
+              "NGINXHTTPServer",
+              "AzureSentinelContinuousThreatMonitoringforSAP"
+            ]
+          },
+          "event_id": {
+            "type": "string"
+          },
+          "data_availability_test": {
+            "type": "object",
+            "properties": {
+              "column_name": {
+                "type": "string"
+              },
+              "column_value": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "column_name",
+              "column_value"
+            ]
+          },
+          "table_name": {
+            "type": "string",
+            "enum": [
+              "AADNonInteractiveUserSignInLogs",
+              "AADServicePrincipalSignInLogs",
+              "ABAPAuditLog_CL",
+              "ADFSSignInLogs",
+              "AWSCloudTrail",
+              "AuditLogs",
+              "AzureActivity",
+              "AzureDiagnostics",
+              "CloudAppEvents",
+              "CommonSecurityLog",
+              "DeviceEvents",
+              "DeviceFileEvents",
+              "DeviceImageLoadEvents",
+              "DeviceInfo",
+              "DeviceLogonEvents",
+              "DeviceNetworkEvents",
+              "DeviceNetworkInfo",
+              "DeviceProcessEvents",
+              "DeviceRegistryEvents",
+              "EmailEvents",
+              "EmailUrlInfo",
+              "Event",
+              "IdentityInfo",
+              "IdentityLogonEvents",
+              "IdentityQueryEvents",
+              "LookupSailPointUsers",
+              "OfficeActivity",
+              "SailPointIDN_Events_CL",
+              "SecurityEvent",
+              "SigninLogs",
+              "UrlClickEvents",
+              "W3CIISLog"
+            ]
+          },
+          "attack_data_source": {
+            "type": "string",
+            "enum": [
+              "Firmware",
+              "User Account",
+              "Scheduled Job",
+              "Malware Repository",
+              "WMI",
+              "Web Credential",
+              "Image",
+              "Kernel",
+              "Process",
+              "Cloud Storage",
+              "Module",
+              "Script",
+              "Sensor Health",
+              "Pod",
+              "Application Log",
+              "Drive",
+              "Command",
+              "Firewall",
+              "Service",
+              "Snapshot",
+              "Persona",
+              "File",
+              "Named Pipe",
+              "Windows Registry",
+              "Cloud Service",
+              "Active Directory",
+              "Driver",
+              "Logon Session",
+              "Network Traffic",
+              "Instance",
+              "Cluster",
+              "Container",
+              "Network Share",
+              "Volume",
+              "Internet Scan",
+              "Group",
+              "Certificate",
+              "Domain Name"
+            ]
+          },
+        "attack_data_component": {
+          "type": "string",
+          "enum": [
+            "Firmware Modification",
+            "User Account Modification",
+            "User Account Creation",
+            "User Account Metadata",
+            "User Account Authentication",
+            "User Account Deletion",
+            "Scheduled Job Metadata",
+            "Scheduled Job Creation",
+            "Scheduled Job Modification",
+            "Malware Content",
+            "Malware Metadata",
+            "WMI Creation",
+            "Web Credential Usage",
+            "Web Credential Creation",
+            "Image Modification",
+            "Image Deletion",
+            "Image Metadata",
+            "Image Creation",
+            "Kernel Module Load",
+            "Process Termination",
+            "Process Access",
+            "Process Metadata",
+            "Process Modification",
+            "OS API Execution",
+            "Process Creation",
+            "Cloud Storage Creation",
+            "Cloud Storage Access",
+            "Cloud Storage Enumeration",
+            "Cloud Storage Deletion",
+            "Cloud Storage Metadata",
+            "Cloud Storage Modification",
+            "Module Load",
+            "Script Execution",
+            "Host Status",
+            "Pod Creation",
+            "Pod Metadata",
+            "Pod Enumeration",
+            "Pod Modification",
+            "Application Log Content",
+            "Drive Access",
+            "Drive Modification",
+            "Drive Creation",
+            "Command Execution",
+            "Firewall Metadata",
+            "Firewall Enumeration",
+            "Firewall Rule Modification",
+            "Firewall Disable",
+            "Service Metadata",
+            "Service Modification",
+            "Service Creation",
+            "Snapshot Deletion",
+            "Snapshot Metadata",
+            "Snapshot Modification",
+            "Snapshot Enumeration",
+            "Snapshot Creation",
+            "Social Media",
+            "File Creation",
+            "File Modification",
+            "File Deletion",
+            "File Access",
+            "File Metadata",
+            "Named Pipe Metadata",
+            "Windows Registry Key Access",
+            "Windows Registry Key Deletion",
+            "Windows Registry Key Modification",
+            "Windows Registry Key Creation",
+            "Cloud Service Modification",
+            "Cloud Service Enumeration",
+            "Cloud Service Metadata",
+            "Cloud Service Disable",
+            "Active Directory Object Deletion",
+            "Active Directory Object Access",
+            "Active Directory Credential Request",
+            "Active Directory Object Modification",
+            "Active Directory Object Creation",
+            "Driver Load",
+            "Driver Metadata",
+            "Logon Session Creation",
+            "Logon Session Metadata",
+            "Network Traffic Flow",
+            "Network Connection Creation",
+            "Network Traffic Content",
+            "Instance Metadata",
+            "Instance Creation",
+            "Instance Stop",
+            "Instance Enumeration",
+            "Instance Deletion",
+            "Instance Modification",
+            "Instance Start",
+            "Cluster Metadata",
+            "Container Metadata",
+            "Container Enumeration",
+            "Container Start",
+            "Container Creation",
+            "Network Share Access",
+            "Volume Metadata",
+            "Volume Creation",
+            "Volume Enumeration",
+            "Volume Deletion",
+            "Volume Modification",
+            "Response Metadata",
+            "Response Content",
+            "Group Modification",
+            "Group Enumeration",
+            "Group Metadata",
+            "Certificate Registration",
+            "Passive DNS",
+            "Active DNS",
+            "Domain Registration"
+          ]
+        }
+        },
+        "required": [
+          "provider"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "permission_required": {
+      "type": "string",
+      "enum": ["Administrator", "User", "Domain Admin", "Root", "SYSTEM"]
+    },
+    "technical_description": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "considerations": {
+      "type": "string"
+    },
+    "false_positives": {
+      "type": "string"
+    },
+    "blindspots": {
+      "type": "string"
+    },
+    "response_plan": {
+      "type": "string"
+    },
+    "change_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+(\\.\\d+)?"
+          },
+          "impact": {
+            "type": "string",
+            "enum": [
+              "major",
+              "minor"
+            ]
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "date",
+          "impact",
+          "message",
+          "version"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "silence_warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "warning" : {
+            "type": "string",
+            "enum": [
+              "W_FORBIDDEN_WORDS",
+              "W_TIMEFRAME_DEFINITION",
+              "W_TIMEFRAME_USAGE",
+              "W_GLOBAL_PREVALENCE",
+              "W_ENTITY_MAPPING",
+              "W_POST_FILTER",
+              "W_UNSPECIFIED_TABLE_USED",
+              "W_UNUSED_TABLE",
+              "W_SHARED_TABLE_WITHOUT_DATA_AVAILABILITY_TEST"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "warning"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "detection_query": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "enum": [
+              "Kusto",
+              "Splunk",
+              "Kibana"
+            ]
+          },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "Sentinel",
+              "M365 Security",
+              "Splunk",
+              "Elastic"
+            ]
+          },
+          "alternate_platforms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Sentinel"
+              ]
+            }
+          },
+          "query": {
+            "type": "string"
+          },
+          "dedup_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "deployment_variables": {
+            "type": "object",
+            "properties": {
+              "query_frequency": {
+                "type": "string",
+                "pattern": "^P((\\d+)Y)?((\\d+)M)?((\\d+)D)?(T((\\d+)H)?((\\d+)M)?((\\d+(.\\d+)?)S)?)?$"
+              },
+              "query_period": {
+                "type": "string",
+                "pattern": "^P((\\d+)Y)?((\\d+)M)?((\\d+)D)?(T((\\d+)H)?((\\d+)M)?((\\d+(.\\d+)?)S)?)?$"
+              },
+              "entity_mapping": {
+                "type": ["object","array"]
+              },
+              "aggregation": {
+                "type": "boolean"
+              },
+              "grouping": {
+                "type": "object"
+              },
+              "alert_display_name_format": {
+                "type": "string"
+              },
+              "custom_details": {
+                "type": "object"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "language",
+          "platform",
+          "query"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": { "platform": { "const": "M365 Security"}}
+            },
+            "then": {
+              "properties": {
+                "deployment_variables" : {
+                  "properties": {
+                    "entity_mapping": {
+                      "type": "object",
+                      "properties": {
+                        "machine": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "string"
+                        },
+                        "mailbox": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "entity_mapping"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": { "platform": { "const": "Sentinel"}}
+            },
+            "then": {
+              "properties": {
+                "deployment_variables" : {
+                  "properties": {
+                    "aggregation": {
+                      "type": "boolean"
+                    },
+                    "grouping": {
+                      "type": "object",
+                      "properties": {
+                        "reopen_closed_incident": {
+                          "type": "boolean"
+                        },
+                        "lookback_duration": {
+                          "type": "string",
+                          "pattern": "^P((\\d+)Y)?((\\d+)M)?((\\d+)D)?(T((\\d+)H)?((\\d+)M)?((\\d+(.\\d+)?)S)?)?$"
+                        },
+                        "matching_method": {
+                          "type": "string"
+                        },
+                        "group_by_entities": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "group_by_custom_details": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "group_by_alert_details": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "entity_mapping": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Account": {
+                            "type": "object",
+                            "properties": {
+                              "AadTenantId": {
+                                "type": "string"
+                              },
+                              "AadUserId": {
+                                "type": "string"
+                              },
+                              "DisplayName": {
+                                "type": "string"
+                              },
+                              "DnsDomain": {
+                                "type": "string"
+                              },
+                              "FullName": {
+                                "type": "string"
+                              },
+                              "IsDomainJoined": {
+                                "type": "string"
+                              },
+                              "Name": {
+                                "type": "string"
+                              },
+                              "NTDomain": {
+                                "type": "string"
+                              },
+                              "ObjectGuid": {
+                                "type": "string"
+                              },
+                              "PUID": {
+                                "type": "string"
+                              },
+                              "Sid": {
+                                "type": "string"
+                              },
+                              "UPNSuffix": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "AzureResource": {
+                            "type": "object",
+                            "properties": {
+                              "ResourceId": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "CloudApplication": {
+                            "type": "object",
+                            "properties": {
+                              "AppId": {
+                                "type": "string"
+                              },
+                              "InstanceName": {
+                                "type": "string"
+                              },
+                              "Name": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "DNS": {
+                            "type": "object",
+                            "properties": {
+                              "DomainName": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "File": {
+                            "type": "object",
+                            "properties": {
+                              "Directory": {
+                                "type": "string"
+                              },
+                              "Name": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "FileHash": {
+                            "type": "object",
+                            "properties": {
+                              "Algorithm": {
+                                "type": "string"
+                              },
+                              "Value": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "Host": {
+                            "type": "object",
+                            "properties": {
+                              "AzureID": {
+                                "type": "string"
+                              },
+                              "DnsDomain": {
+                                "type": "string"
+                              },
+                              "FullName": {
+                                "type": "string"
+                              },
+                              "HostName": {
+                                "type": "string"
+                              },
+                              "IsDomainJoined": {
+                                "type": "string"
+                              },
+                              "NetBiosName": {
+                                "type": "string"
+                              },
+                              "NTDomain": {
+                                "type": "string"
+                              },
+                              "OMSAgentID": {
+                                "type": "string"
+                              },
+                              "OSFamily": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "IP": {
+                            "type": "object",
+                            "properties": {
+                              "Address": {
+                                "type": "string"
+                              },
+                              "AddressScope": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "Mailbox": {
+                            "type": "object",
+                            "properties": {
+                              "DisplayName": {
+                                "type": "string"
+                              },
+                              "ExternalDirectoryObjectId": {
+                                "type": "string"
+                              },
+                              "MailboxPrimaryAddress": {
+                                "type": "string"
+                              },
+                              "RiskLevel": {
+                                "type": "string"
+                              },
+                              "Upn": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "MailCluster": {
+                            "type": "object",
+                            "properties": {
+                              "ClusterGroup": {
+                                "type": "string"
+                              },
+                              "ClusterQueryEndTime": {
+                                "type": "string"
+                              },
+                              "ClusterQueryStartTime": {
+                                "type": "string"
+                              },
+                              "ClusterSourceIdentifier": {
+                                "type": "string"
+                              },
+                              "ClusterSourceType": {
+                                "type": "string"
+                              },
+                              "CountByDeliveryStatus": {
+                                "type": "string"
+                              },
+                              "CountByProtectionStatus": {
+                                "type": "string"
+                              },
+                              "CountByThreatType": {
+                                "type": "string"
+                              },
+                              "IsVolumeAnomaly": {
+                                "type": "string"
+                              },
+                              "MailCount": {
+                                "type": "string"
+                              },
+                              "NetworkMessageIds": {
+                                "type": "string"
+                              },
+                              "Query": {
+                                "type": "string"
+                              },
+                              "QueryTime": {
+                                "type": "string"
+                              },
+                              "Source": {
+                                "type": "string"
+                              },
+                              "Threats": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "MailMessage": {
+                            "type": "object",
+                            "properties": {
+                              "AntispamDirection": {
+                                "type": "string"
+                              },
+                              "BodyFingerprintBin1": {
+                                "type": "string"
+                              },
+                              "BodyFingerprintBin2": {
+                                "type": "string"
+                              },
+                              "BodyFingerprintBin3": {
+                                "type": "string"
+                              },
+                              "BodyFingerprintBin4": {
+                                "type": "string"
+                              },
+                              "BodyFingerprintBin5": {
+                                "type": "string"
+                              },
+                              "DeliveryAction": {
+                                "type": "string"
+                              },
+                              "DeliveryLocation": {
+                                "type": "string"
+                              },
+                              "InternetMessageId": {
+                                "type": "string"
+                              },
+                              "Language": {
+                                "type": "string"
+                              },
+                              "NetworkMessageId": {
+                                "type": "string"
+                              },
+                              "P1Sender": {
+                                "type": "string"
+                              },
+                              "P1SenderDisplayName": {
+                                "type": "string"
+                              },
+                              "P1SenderDomain": {
+                                "type": "string"
+                              },
+                              "P2Sender": {
+                                "type": "string"
+                              },
+                              "P2SenderDisplayName": {
+                                "type": "string"
+                              },
+                              "P2SenderDomain": {
+                                "type": "string"
+                              },
+                              "ReceivedDate": {
+                                "type": "string"
+                              },
+                              "Recipient": {
+                                "type": "string"
+                              },
+                              "Sender": {
+                                "type": "string"
+                              },
+                              "SenderIP": {
+                                "type": "string"
+                              },
+                              "Subject": {
+                                "type": "string"
+                              },
+                              "ThreatDetectionMethods": {
+                                "type": "string"
+                              },
+                              "Threats": {
+                                "type": "string"
+                              },
+                              "Urls": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "Malware": {
+                            "type": "object",
+                            "properties": {
+                              "Category": {
+                                "type": "string"
+                              },
+                              "Name": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "Process": {
+                            "type": "object",
+                            "properties": {
+                              "CommandLine": {
+                                "type": "string"
+                              },
+                              "CreationTimeUtc": {
+                                "type": "string"
+                              },
+                              "ElevationToken": {
+                                "type": "string"
+                              },
+                              "ProcessId": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "RegistryKey": {
+                            "type": "object",
+                            "properties": {
+                              "Hive": {
+                                "type": "string"
+                              },
+                              "Key": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "RegistryValue": {
+                            "type": "object",
+                            "properties": {
+                              "Name": {
+                                "type": "string"
+                              },
+                              "Value": {
+                                "type": "string"
+                              },
+                              "ValueType": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "SecurityGroup": {
+                            "type": "object",
+                            "properties": {
+                              "DistinguishedName": {
+                                "type": "string"
+                              },
+                              "ObjectGuid": {
+                                "type": "string"
+                              },
+                              "SID": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "SubmissionMail": {
+                            "type": "object",
+                            "properties": {
+                              "NetworkMessageId": {
+                                "type": "string"
+                              },
+                              "Recipient": {
+                                "type": "string"
+                              },
+                              "ReportType": {
+                                "type": "string"
+                              },
+                              "Sender": {
+                                "type": "string"
+                              },
+                              "SenderIp": {
+                                "type": "string"
+                              },
+                              "Subject": {
+                                "type": "string"
+                              },
+                              "SubmissionDate": {
+                                "type": "string"
+                              },
+                              "SubmissionId": {
+                                "type": "string"
+                              },
+                              "Submitter": {
+                                "type": "string"
+                              },
+                              "Timestamp": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
+                          "URL": {
+                            "type": "object",
+                            "properties": {
+                              "Url": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+    }
+  },
+  "required": [
+    "name",
+    "id",
+    "os_family",
+    "fp_rate",
+    "severity",
+    "attack",
+    "data_sources",
+    "permission_required",
+    "technical_description",
+    "description",
+    "considerations",
+    "false_positives",
+    "blindspots",
+    "references",
+    "detection_query"
+  ],
+  "additionalProperties": false
+}

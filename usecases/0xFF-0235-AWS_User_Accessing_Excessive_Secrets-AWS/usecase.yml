@@ -1,0 +1,68 @@
+name: AWS User Accessing Excessive Secrets
+id: 0xFF-0235-AWS_User_Accessing_Excessive_Secrets-AWS
+tags:
+  - AWS
+  - SuspiciousBehavior
+os_family:
+  - N/A
+fp_rate: Low
+severity: Medium
+attack:
+  - {tactic: 'TA0009', technique: T1530}
+data_sources:
+  - provider: AWS
+    event_id: GetPasswordData
+    table_name: AWSCloudTrail
+    attack_data_source: Application Log
+    attack_data_component: Application Log Content
+permission_required: User
+technical_description: >
+  This query searches for an account which accesses a large number of secrets from various sources in AWS, including SSM secrets and
+  instance passwords.
+description: >
+  When an attacker gains access to an account with access to AWS,they might abuse that account to view secrets stored in the AWS cloud.
+considerations: >
+  None.
+false_positives: >
+  There might be user accounts that access large numbers of secrets for business purposes. For example, an account associated with a
+  remote management tool. These accounts have be filtered.
+blindspots: >
+  None known.
+response_plan: >
+  Confirm if the user responsible for the account that triggered this alert is aware of the attempts to access secrets.
+references:
+  - https://github.com/DataDog/stratus-red-team
+change_log:
+  - {version: '1.2', date: '2022-08-25', impact: minor, message: Entity mapping added.}
+  - {version: '1.1', date: '2022-02-22', impact: minor, message: 'Use ingestion_time for event selection and include de-duplication logic.' }
+  - {version: '1.0', date: '2022-02-01', impact: major, message: Initial version.}
+detection_query:
+  language: Kusto
+  platform: Sentinel
+  deployment_variables:
+    query_frequency: PT1H
+    query_period: PT2H
+    entity_mapping:
+      - Account:
+          Name: UserAccount
+  query: |
+    let timeframe = 2*1h;
+    let time_period = 10m;
+    let access_threshold = 10;
+    // The rule will trigger when more than access_threshold secrets are requested in time_period.
+    AWSCloudTrail
+    | where ingestion_time() >= ago(timeframe)
+    | where EventName in ("GetPasswordData","GetSecretValue","Decrypt")
+    | extend SecretId=case(
+        EventName == "GetPasswordData", parse_json(RequestParameters).instanceId,
+        EventName == "GetSecretValue", parse_json(RequestParameters).secretId,
+        EventName == "Decrypt", coalesce(parse_json(parse_json(RequestParameters).encryptionContext).SecretARN, parse_json(parse_json(RequestParameters).encryptionContext).PARAMETER_ARN)
+        , ""
+    )
+    // For Decrypt only look at decryption of SSM secrets.
+    | where EventName != "Decrypt" or SecretId startswith "arn:aws:ssm"
+    | summarize arg_min(TimeGenerated, *), SecretCount=count(), Secrets=make_set(SecretId) by UserIdentityArn, TimeBin=bin(TimeGenerated, time_period)
+    | where SecretCount > access_threshold
+    // Begin client-specific filter.
+    // End client-specific filter.
+    | extend UserAccount=tostring(split(UserIdentityArn, "/")[-1])

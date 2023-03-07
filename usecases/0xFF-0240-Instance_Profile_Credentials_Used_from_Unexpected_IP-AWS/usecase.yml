@@ -1,0 +1,80 @@
+name: AWS Instance Profile Credentials Used from Unexpected IP
+id: 0xFF-0240-Instance_Profile_Credentials_Used_from_Unexpected_IP-AWS
+tags:
+  - AWS
+  - SuspiciousBehavior
+os_family:
+  - N/A
+fp_rate: Low
+severity: Medium
+attack:
+  - {tactic: 'TA0003', technique: T1078, sub_technique: "004"}
+data_sources:
+  - provider: AWS
+    table_name: AWSCloudTrail
+    attack_data_source: Cloud Service
+    attack_data_component: Cloud Service Modification
+permission_required: User
+technical_description: >
+  This query searches for API calls made by credentials originating from an instance profile. It creates a summary of the external IP addresses used for these calls.
+  When the same instance is observed making calls from multiple IP addresses, this is considered suspicious and the rule triggers.
+description: >
+  When an attacker gains access to an EC2 instance in AWS, the metadata of that instance can be extracted via the metadata endpoint. This metadata can include access credentials
+  linked to the instance via instance profiles. The attacker can load these credentials in their own system and use them to access AWS APIs.
+considerations: >
+  The query should run over an extended time period, for example, 24 hours, to ensure that both legitimate and illegitimate requests are covered.
+false_positives: >
+  There might be EC2 machines that have multiple external IP addresses. These will have to be filtered.
+blindspots: >
+  The detection relies on the `UserIdentityPrincipalid` containing `:i-` to detect access by credentials originating from an instance profile.
+  An attacker might be able to bypass this by manually obtaining credentials.
+response_plan: >
+  The EC2 instance ID is available in the `InstanceId` field. The events called per remote IP address are in the `EventsByIp` field.
+  Confirm if the EC2 instance is expected to be using multiple external IP addresses for AWS API calls. Investigate if the additional IPs identified
+  are related to AWS or another provider.
+references:
+  - https://github.com/DataDog/stratus-red-team
+  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html
+  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
+change_log:
+  - {version: '1.2', date: '2022-08-25', impact: minor, message: Entity mapping added.}
+  - {version: '1.1', date: '2022-02-22', impact: minor, message: 'Use ingestion_time for event selection and include de-duplication logic.' }
+  - {version: '1.0', date: '2022-02-02', impact: major, message: Initial version.}
+detection_query:
+  language: Kusto
+  platform: Sentinel
+  deployment_variables:
+    query_frequency: P1D
+    query_period: P2D
+    entity_mapping:
+      - IP:
+          Address: SourceIpAddress
+      - Host:
+          FullName: InstanceId
+  query: |
+    let timeframe = 2*1d;
+    let InstanceAPICalls=(
+        AWSCloudTrail
+        | where ingestion_time() >= ago(timeframe)
+        | where UserIdentityPrincipalid contains_cs ":i-"
+        | parse UserIdentityPrincipalid with * ":i-" InstanceId
+        | where not(ipv4_is_match(SourceIpAddress, "198.18.0.0/15")) // AWS interconnect.
+        | where not(SourceIpAddress =~ "AWS Internal")
+        | where not(ipv4_is_private(SourceIpAddress))
+        // Begin client-specific filter.
+        // End client-specific filter.
+    );
+    let InstancesFromMultipleIPs=(
+        InstanceAPICalls
+        | summarize IPCount=dcount(SourceIpAddress) by InstanceId
+        | where IPCount > 1
+    );
+    InstanceAPICalls
+    // Find calls that originate from an instance which has multiple known IPs.
+    | lookup kind=inner InstancesFromMultipleIPs on InstanceId
+    // Find the first event issued by the Source IP that made the least number of calls since that is likely to be
+    // a request issued by the attacker.
+    | summarize arg_min(TimeGenerated, *), EventCount=count(), EventNames=make_set(EventName) by InstanceId, SourceIpAddress
+    | summarize arg_min(EventCount,*), ObservedIps=make_set(SourceIpAddress),RequestCountByIp=make_bag(pack(SourceIpAddress, EventCount)),EventsByIp=make_bag(pack(SourceIpAddress, EventNames)) by InstanceId
+    // Begin client-specific filter.
+    // End client-specific filter.

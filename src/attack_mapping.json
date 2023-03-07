@@ -1,0 +1,5578 @@
+{
+  "tactics": {
+    "TA0001": "Initial Access",
+    "TA0002": "Execution",
+    "TA0003": "Persistence",
+    "TA0004": "Privilege Escalation",
+    "TA0005": "Defense Evasion",
+    "TA0006": "Credential Access",
+    "TA0007": "Discovery",
+    "TA0008": "Lateral Movement",
+    "TA0009": "Collection",
+    "TA0010": "Exfiltration",
+    "TA0011": "Command and Control",
+    "TA0040": "Impact",
+    "TA0042": "Resource Development",
+    "TA0043": "Reconnaissance"
+  },
+  "technique_datasource_mapping": {
+    "T1001": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1001.001": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1001.002": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1001.003": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1003": [
+      "Network Traffic: Network Traffic Flow",
+      "Windows Registry: Windows Registry Key Access",
+      "Network Traffic: Network Traffic Content",
+      "Process: Process Access",
+      "Command: Command Execution",
+      "Process: OS API Execution",
+      "Active Directory: Active Directory Object Access",
+      "Process: Process Creation",
+      "File: File Access"
+    ],
+    "T1003.001": [
+      "Process: Process Access",
+      "Process: Process Creation",
+      "Process: OS API Execution",
+      "Command: Command Execution"
+    ],
+    "T1003.002": [
+      "Windows Registry: Windows Registry Key Access",
+      "File: File Access",
+      "Command: Command Execution"
+    ],
+    "T1003.003": [
+      "File: File Access",
+      "Command: Command Execution"
+    ],
+    "T1003.004": [
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Access"
+    ],
+    "T1003.005": [
+      "Command: Command Execution"
+    ],
+    "T1003.006": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Active Directory: Active Directory Object Access"
+    ],
+    "T1003.007": [
+      "File: File Access",
+      "Command: Command Execution"
+    ],
+    "T1003.008": [
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1005": [
+      "Process: OS API Execution",
+      "File: File Access",
+      "Process: Process Creation",
+      "Script: Script Execution",
+      "Command: Command Execution"
+    ],
+    "T1006": [
+      "Drive: Drive Access",
+      "Command: Command Execution"
+    ],
+    "T1007": [
+      "Command: Command Execution",
+      "Process: OS API Execution",
+      "Process: Process Creation"
+    ],
+    "T1008": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1010": [
+      "Process: OS API Execution",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1011": [
+      "Network Traffic: Network Connection Creation",
+      "File: File Access",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1011.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Command: Command Execution",
+      "Network Traffic: Network Connection Creation",
+      "File: File Access",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1012": [
+      "Process: OS API Execution",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Access"
+    ],
+    "T1014": [
+      "Drive: Drive Modification",
+      "Firmware: Firmware Modification",
+      "File: File Modification"
+    ],
+    "T1016": [
+      "Command: Command Execution",
+      "Script: Script Execution",
+      "Process: Process Creation",
+      "Process: OS API Execution"
+    ],
+    "T1016.001": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1018": [
+      "Command: Command Execution",
+      "File: File Access",
+      "Process: Process Creation",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1020": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content",
+      "Script: Script Execution",
+      "File: File Access",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1020.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1021": [
+      "Process: Process Creation",
+      "Module: Module Load",
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow",
+      "Command: Command Execution",
+      "Logon Session: Logon Session Creation",
+      "Network Share: Network Share Access"
+    ],
+    "T1021.001": [
+      "Network Traffic: Network Connection Creation",
+      "Logon Session: Logon Session Creation",
+      "Process: Process Creation",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1021.002": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow",
+      "Logon Session: Logon Session Creation",
+      "Command: Command Execution",
+      "Network Share: Network Share Access"
+    ],
+    "T1021.003": [
+      "Process: Process Creation",
+      "Network Traffic: Network Connection Creation",
+      "Module: Module Load"
+    ],
+    "T1021.004": [
+      "Network Traffic: Network Connection Creation",
+      "Logon Session: Logon Session Creation",
+      "Process: Process Creation"
+    ],
+    "T1021.005": [
+      "Process: Process Creation",
+      "Logon Session: Logon Session Creation",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1021.006": [
+      "Logon Session: Logon Session Creation",
+      "Service: Service Metadata",
+      "Process: Process Creation",
+      "Network Traffic: Network Connection Creation",
+      "Command: Command Execution"
+    ],
+    "T1025": [
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1027": [
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "File: File Creation",
+      "Module: Module Load",
+      "Process: Process Creation",
+      "File: File Metadata"
+    ],
+    "T1027.001": [
+      "File: File Metadata"
+    ],
+    "T1027.002": [
+      "File: File Metadata"
+    ],
+    "T1027.003": [
+      "File: File Metadata"
+    ],
+    "T1027.004": [
+      "Process: Process Creation",
+      "File: File Creation",
+      "Command: Command Execution",
+      "File: File Metadata"
+    ],
+    "T1027.005": [
+      "Application Log: Application Log Content"
+    ],
+    "T1027.006": [
+      "File: File Creation"
+    ],
+    "T1027.007": [
+      "Module: Module Load",
+      "File: File Metadata",
+      "Process: OS API Execution"
+    ],
+    "T1027.008": [
+      "File: File Metadata"
+    ],
+    "T1027.009": [
+      "File: File Metadata",
+      "File: File Creation"
+    ],
+    "T1029": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1030": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1033": [
+      "Windows Registry: Windows Registry Key Access",
+      "Process: Process Access",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Flow",
+      "File: File Access",
+      "Process: OS API Execution",
+      "Active Directory: Active Directory Object Access",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1036": [
+      "Service: Service Creation",
+      "Scheduled Job: Scheduled Job Metadata",
+      "Scheduled Job: Scheduled Job Modification",
+      "Service: Service Metadata",
+      "File: File Metadata",
+      "Image: Image Metadata",
+      "Command: Command Execution",
+      "Process: Process Metadata",
+      "File: File Modification"
+    ],
+    "T1036.001": [
+      "File: File Metadata"
+    ],
+    "T1036.002": [
+      "File: File Metadata"
+    ],
+    "T1036.003": [
+      "Process: Process Metadata",
+      "File: File Modification",
+      "Command: Command Execution",
+      "File: File Metadata"
+    ],
+    "T1036.004": [
+      "Scheduled Job: Scheduled Job Modification",
+      "Scheduled Job: Scheduled Job Metadata",
+      "Service: Service Metadata",
+      "Service: Service Creation",
+      "Command: Command Execution"
+    ],
+    "T1036.005": [
+      "File: File Metadata",
+      "Image: Image Metadata",
+      "Process: Process Metadata"
+    ],
+    "T1036.006": [
+      "File: File Metadata"
+    ],
+    "T1036.007": [
+      "File: File Creation",
+      "File: File Metadata"
+    ],
+    "T1037": [
+      "Active Directory: Active Directory Object Modification",
+      "Process: Process Creation",
+      "File: File Creation",
+      "Command: Command Execution",
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Creation"
+    ],
+    "T1037.001": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Creation"
+    ],
+    "T1037.002": [
+      "File: File Creation",
+      "File: File Modification",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1037.003": [
+      "File: File Creation",
+      "Active Directory: Active Directory Object Modification",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Modification"
+    ],
+    "T1037.004": [
+      "File: File Modification",
+      "File: File Creation",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1037.005": [
+      "File: File Creation",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "File: File Modification"
+    ],
+    "T1039": [
+      "Network Share: Network Share Access",
+      "Network Traffic: Network Connection Creation",
+      "Command: Command Execution",
+      "File: File Access",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1040": [
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1041": [
+      "Network Traffic: Network Traffic Content",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation",
+      "File: File Access"
+    ],
+    "T1046": [
+      "Cloud Service: Cloud Service Enumeration",
+      "Network Traffic: Network Traffic Flow",
+      "Command: Command Execution"
+    ],
+    "T1047": [
+      "Process: Process Creation",
+      "Network Traffic: Network Connection Creation",
+      "Command: Command Execution"
+    ],
+    "T1048": [
+      "File: File Access",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Command: Command Execution",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1048.001": [
+      "File: File Access",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content",
+      "Command: Command Execution",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1048.002": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content",
+      "File: File Access",
+      "Command: Command Execution"
+    ],
+    "T1048.003": [
+      "File: File Access",
+      "Network Traffic: Network Traffic Content",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1049": [
+      "Command: Command Execution",
+      "Process: OS API Execution",
+      "Process: Process Creation"
+    ],
+    "T1052": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Drive: Drive Creation",
+      "File: File Access"
+    ],
+    "T1052.001": [
+      "File: File Access",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Drive: Drive Creation"
+    ],
+    "T1053": [
+      "Scheduled Job: Scheduled Job Creation",
+      "Container: Container Creation",
+      "Process: Process Creation",
+      "File: File Modification",
+      "File: File Creation",
+      "Command: Command Execution"
+    ],
+    "T1053.002": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "File: File Modification",
+      "Scheduled Job: Scheduled Job Creation"
+    ],
+    "T1053.003": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Modification",
+      "Scheduled Job: Scheduled Job Creation"
+    ],
+    "T1053.005": [
+      "Scheduled Job: Scheduled Job Creation",
+      "Windows Registry: Windows Registry Key Creation",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Modification"
+    ],
+    "T1053.006": [
+      "Process: Process Creation",
+      "File: File Modification",
+      "Command: Command Execution",
+      "Scheduled Job: Scheduled Job Creation"
+    ],
+    "T1053.007": [
+      "File: File Creation",
+      "Container: Container Creation",
+      "Scheduled Job: Scheduled Job Creation"
+    ],
+    "T1055": [
+      "Process: Process Modification",
+      "File: File Metadata",
+      "File: File Modification",
+      "Process: Process Metadata",
+      "Process: OS API Execution",
+      "Process: Process Access",
+      "Module: Module Load"
+    ],
+    "T1055.001": [
+      "Process: Process Metadata",
+      "Process: OS API Execution",
+      "Process: Process Access",
+      "Process: Process Modification",
+      "Module: Module Load"
+    ],
+    "T1055.002": [
+      "Process: Process Access",
+      "Process: OS API Execution",
+      "Process: Process Modification"
+    ],
+    "T1055.003": [
+      "Process: OS API Execution",
+      "Process: Process Modification",
+      "Process: Process Access"
+    ],
+    "T1055.004": [
+      "Process: Process Access",
+      "Process: Process Modification",
+      "Process: OS API Execution"
+    ],
+    "T1055.005": [
+      "Process: Process Modification",
+      "Process: Process Access",
+      "Process: OS API Execution"
+    ],
+    "T1055.008": [
+      "Process: Process Modification",
+      "Process: Process Access",
+      "Process: OS API Execution"
+    ],
+    "T1055.009": [
+      "File: File Modification"
+    ],
+    "T1055.011": [
+      "Process: OS API Execution"
+    ],
+    "T1055.012": [
+      "Process: Process Access",
+      "Process: OS API Execution",
+      "Process: Process Modification"
+    ],
+    "T1055.013": [
+      "File: File Metadata",
+      "Process: OS API Execution"
+    ],
+    "T1055.014": [
+      "Process: OS API Execution",
+      "Module: Module Load"
+    ],
+    "T1055.015": [
+      "Process: Process Modification",
+      "Process: OS API Execution"
+    ],
+    "T1056": [
+      "File: File Modification",
+      "Process: Process Creation",
+      "Process: OS API Execution",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Metadata",
+      "Driver: Driver Load"
+    ],
+    "T1056.001": [
+      "Process: OS API Execution",
+      "Driver: Driver Load",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1056.002": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Script: Script Execution"
+    ],
+    "T1056.003": [
+      "File: File Modification"
+    ],
+    "T1056.004": [
+      "Process: OS API Execution",
+      "Process: Process Metadata"
+    ],
+    "T1057": [
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1059": [
+      "Process: Process Creation",
+      "Module: Module Load",
+      "Process: Process Metadata",
+      "Script: Script Execution",
+      "Command: Command Execution"
+    ],
+    "T1059.001": [
+      "Script: Script Execution",
+      "Command: Command Execution",
+      "Process: Process Metadata",
+      "Process: Process Creation",
+      "Module: Module Load"
+    ],
+    "T1059.002": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Process: OS API Execution"
+    ],
+    "T1059.003": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1059.004": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1059.005": [
+      "Process: Process Creation",
+      "Module: Module Load",
+      "Script: Script Execution",
+      "Command: Command Execution"
+    ],
+    "T1059.006": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1059.007": [
+      "Process: Process Creation",
+      "Script: Script Execution",
+      "Command: Command Execution",
+      "Module: Module Load"
+    ],
+    "T1059.008": [
+      "Command: Command Execution"
+    ],
+    "T1068": [
+      "Driver: Driver Load",
+      "Process: Process Creation"
+    ],
+    "T1069": [
+      "Group: Group Enumeration",
+      "Application Log: Application Log Content",
+      "Process: Process Creation",
+      "Group: Group Metadata",
+      "Command: Command Execution"
+    ],
+    "T1069.001": [
+      "Group: Group Enumeration",
+      "Command: Command Execution",
+      "Process: OS API Execution",
+      "Process: Process Creation"
+    ],
+    "T1069.002": [
+      "Process: OS API Execution",
+      "Group: Group Enumeration",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1069.003": [
+      "Group: Group Enumeration",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Group: Group Metadata",
+      "Application Log: Application Log Content"
+    ],
+    "T1070": [
+      "Process: OS API Execution",
+      "Network Traffic: Network Traffic Content",
+      "File: File Modification",
+      "File: File Deletion",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Modification",
+      "File: File Metadata",
+      "Firewall: Firewall Rule Modification",
+      "Scheduled Job: Scheduled Job Modification",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Deletion",
+      "User Account: User Account Authentication"
+    ],
+    "T1070.001": [
+      "Process: OS API Execution",
+      "File: File Deletion",
+      "Command: Command Execution"
+    ],
+    "T1070.002": [
+      "File: File Deletion",
+      "Command: Command Execution",
+      "File: File Modification"
+    ],
+    "T1070.003": [
+      "File: File Modification",
+      "File: File Deletion",
+      "User Account: User Account Authentication",
+      "Command: Command Execution"
+    ],
+    "T1070.004": [
+      "Command: Command Execution",
+      "File: File Deletion"
+    ],
+    "T1070.005": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Content",
+      "User Account: User Account Authentication"
+    ],
+    "T1070.006": [
+      "File: File Modification",
+      "File: File Metadata"
+    ],
+    "T1070.007": [
+      "Process: Process Creation",
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "Firewall: Firewall Rule Modification"
+    ],
+    "T1070.008": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Modification",
+      "File: File Deletion"
+    ],
+    "T1070.009": [
+      "Process: Process Creation",
+      "Scheduled Job: Scheduled Job Modification",
+      "File: File Deletion",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Deletion"
+    ],
+    "T1071": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1071.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1071.002": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1071.003": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1071.004": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1072": [
+      "Process: Process Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1074": [
+      "File: File Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1074.001": [
+      "File: File Access",
+      "File: File Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution"
+    ],
+    "T1074.002": [
+      "File: File Access",
+      "Command: Command Execution",
+      "File: File Creation"
+    ],
+    "T1078": [
+      "Logon Session: Logon Session Creation",
+      "Logon Session: Logon Session Metadata",
+      "User Account: User Account Authentication"
+    ],
+    "T1078.001": [
+      "User Account: User Account Authentication",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1078.002": [
+      "Logon Session: Logon Session Metadata",
+      "Logon Session: Logon Session Creation",
+      "User Account: User Account Authentication"
+    ],
+    "T1078.003": [
+      "User Account: User Account Authentication",
+      "Logon Session: Logon Session Metadata",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1078.004": [
+      "Logon Session: Logon Session Metadata",
+      "User Account: User Account Authentication",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1080": [
+      "Network Share: Network Share Access",
+      "Process: Process Creation",
+      "File: File Modification",
+      "File: File Creation"
+    ],
+    "T1082": [
+      "Process: OS API Execution",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1083": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Process: OS API Execution"
+    ],
+    "T1087": [
+      "File: File Access",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1087.001": [
+      "Process: Process Creation",
+      "Process: OS API Execution",
+      "File: File Access",
+      "Command: Command Execution",
+      "Group: Group Enumeration"
+    ],
+    "T1087.002": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Network Traffic: Network Traffic Content",
+      "Group: Group Enumeration",
+      "Process: OS API Execution"
+    ],
+    "T1087.003": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1087.004": [
+      "Command: Command Execution"
+    ],
+    "T1090": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1090.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1090.002": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1090.003": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1090.004": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1091": [
+      "File: File Creation",
+      "Process: Process Creation",
+      "File: File Access",
+      "Drive: Drive Creation"
+    ],
+    "T1092": [
+      "Drive: Drive Access",
+      "Drive: Drive Creation"
+    ],
+    "T1095": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1098": [
+      "User Account: User Account Modification",
+      "Group: Group Modification",
+      "Process: Process Creation",
+      "Active Directory: Active Directory Object Modification",
+      "Command: Command Execution",
+      "File: File Modification"
+    ],
+    "T1098.001": [
+      "Active Directory: Active Directory Object Modification",
+      "User Account: User Account Modification"
+    ],
+    "T1098.002": [
+      "User Account: User Account Modification",
+      "Application Log: Application Log Content",
+      "Group: Group Modification"
+    ],
+    "T1098.003": [
+      "User Account: User Account Modification"
+    ],
+    "T1098.004": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "File: File Modification"
+    ],
+    "T1098.005": [
+      "User Account: User Account Modification",
+      "Active Directory: Active Directory Object Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1102": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1102.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1102.002": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1102.003": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1104": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1105": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow",
+      "File: File Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1106": [
+      "Module: Module Load",
+      "Process: OS API Execution"
+    ],
+    "T1110": [
+      "User Account: User Account Authentication",
+      "Command: Command Execution",
+      "Application Log: Application Log Content"
+    ],
+    "T1110.001": [
+      "User Account: User Account Authentication",
+      "Application Log: Application Log Content"
+    ],
+    "T1110.002": [
+      "User Account: User Account Authentication",
+      "Application Log: Application Log Content"
+    ],
+    "T1110.003": [
+      "Application Log: Application Log Content",
+      "User Account: User Account Authentication"
+    ],
+    "T1110.004": [
+      "User Account: User Account Authentication",
+      "Application Log: Application Log Content"
+    ],
+    "T1111": [
+      "Process: OS API Execution",
+      "Driver: Driver Load",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1112": [
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Creation",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: OS API Execution",
+      "Windows Registry: Windows Registry Key Deletion"
+    ],
+    "T1113": [
+      "Command: Command Execution",
+      "Process: OS API Execution"
+    ],
+    "T1114": [
+      "Command: Command Execution",
+      "Logon Session: Logon Session Creation",
+      "Application Log: Application Log Content",
+      "File: File Access",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1114.001": [
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1114.002": [
+      "Command: Command Execution",
+      "Network Traffic: Network Connection Creation",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1114.003": [
+      "Application Log: Application Log Content"
+    ],
+    "T1115": [
+      "Process: OS API Execution",
+      "Command: Command Execution"
+    ],
+    "T1119": [
+      "Script: Script Execution",
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1120": [
+      "Command: Command Execution",
+      "Process: OS API Execution",
+      "Process: Process Creation"
+    ],
+    "T1123": [
+      "Process: OS API Execution",
+      "Command: Command Execution"
+    ],
+    "T1124": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Process: OS API Execution"
+    ],
+    "T1125": [
+      "Command: Command Execution",
+      "Process: OS API Execution"
+    ],
+    "T1127": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1127.001": [
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1129": [
+      "Module: Module Load",
+      "Process: OS API Execution"
+    ],
+    "T1132": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1132.001": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1132.002": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1133": [
+      "Network Traffic: Network Traffic Flow",
+      "Logon Session: Logon Session Metadata",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1134": [
+      "Process: Process Metadata",
+      "Process: OS API Execution",
+      "User Account: User Account Metadata",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Active Directory: Active Directory Object Modification"
+    ],
+    "T1134.001": [
+      "Command: Command Execution",
+      "Process: OS API Execution"
+    ],
+    "T1134.002": [
+      "Command: Command Execution",
+      "Process: OS API Execution"
+    ],
+    "T1134.003": [
+      "Process: OS API Execution",
+      "Command: Command Execution"
+    ],
+    "T1134.004": [
+      "Process: OS API Execution",
+      "Process: Process Metadata",
+      "Process: Process Creation"
+    ],
+    "T1134.005": [
+      "Active Directory: Active Directory Object Modification",
+      "Process: OS API Execution",
+      "User Account: User Account Metadata"
+    ],
+    "T1135": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Process: OS API Execution"
+    ],
+    "T1136": [
+      "Command: Command Execution",
+      "User Account: User Account Creation",
+      "Process: Process Creation"
+    ],
+    "T1136.001": [
+      "Command: Command Execution",
+      "User Account: User Account Creation",
+      "Process: Process Creation"
+    ],
+    "T1136.002": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "User Account: User Account Creation"
+    ],
+    "T1136.003": [
+      "User Account: User Account Creation"
+    ],
+    "T1137": [
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Creation",
+      "Module: Module Load",
+      "File: File Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation",
+      "Application Log: Application Log Content",
+      "Command: Command Execution"
+    ],
+    "T1137.001": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "File: File Modification",
+      "File: File Creation",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Creation"
+    ],
+    "T1137.002": [
+      "Windows Registry: Windows Registry Key Creation",
+      "File: File Creation",
+      "Command: Command Execution",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification",
+      "File: File Modification",
+      "Process: Process Creation"
+    ],
+    "T1137.003": [
+      "Application Log: Application Log Content",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1137.004": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Application Log: Application Log Content"
+    ],
+    "T1137.005": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1137.006": [
+      "File: File Modification",
+      "Command: Command Execution",
+      "File: File Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Windows Registry: Windows Registry Key Creation",
+      "Process: Process Creation"
+    ],
+    "T1140": [
+      "Process: Process Creation",
+      "File: File Modification",
+      "Script: Script Execution"
+    ],
+    "T1176": [
+      "Process: Process Creation",
+      "Network Traffic: Network Connection Creation",
+      "File: File Creation",
+      "Windows Registry: Windows Registry Key Creation",
+      "Command: Command Execution"
+    ],
+    "T1185": [
+      "Logon Session: Logon Session Creation",
+      "Process: Process Modification",
+      "Process: Process Access"
+    ],
+    "T1187": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "File: File Access",
+      "File: File Creation",
+      "File: File Modification"
+    ],
+    "T1189": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content",
+      "File: File Creation",
+      "Process: Process Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1190": [
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1195": [
+      "File: File Metadata",
+      "Sensor Health: Host Status"
+    ],
+    "T1195.001": [
+      "File: File Metadata"
+    ],
+    "T1195.002": [
+      "File: File Metadata"
+    ],
+    "T1195.003": [
+      "Sensor Health: Host Status"
+    ],
+    "T1197": [
+      "Process: Process Creation",
+      "Service: Service Metadata",
+      "Network Traffic: Network Connection Creation",
+      "Command: Command Execution"
+    ],
+    "T1199": [
+      "Logon Session: Logon Session Creation",
+      "Application Log: Application Log Content",
+      "Logon Session: Logon Session Metadata",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1200": [
+      "Drive: Drive Creation",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1201": [
+      "User Account: User Account Metadata",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1202": [
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1203": [
+      "Process: Process Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1204": [
+      "Container: Container Creation",
+      "Network Traffic: Network Connection Creation",
+      "Container: Container Start",
+      "Instance: Instance Creation",
+      "Instance: Instance Start",
+      "Image: Image Creation",
+      "Process: Process Creation",
+      "Network Traffic: Network Traffic Content",
+      "Command: Command Execution",
+      "Application Log: Application Log Content",
+      "File: File Creation"
+    ],
+    "T1204.001": [
+      "Network Traffic: Network Connection Creation",
+      "File: File Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1204.002": [
+      "Process: Process Creation",
+      "File: File Creation"
+    ],
+    "T1204.003": [
+      "Image: Image Creation",
+      "Instance: Instance Start",
+      "Container: Container Creation",
+      "Command: Command Execution",
+      "Container: Container Start",
+      "Application Log: Application Log Content",
+      "Instance: Instance Creation"
+    ],
+    "T1205": [
+      "Network Traffic: Network Traffic Flow",
+      "Process: Process Creation",
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1205.001": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1205.002": [
+      "Network Traffic: Network Connection Creation",
+      "Process: Process Creation"
+    ],
+    "T1207": [
+      "Active Directory: Active Directory Object Creation",
+      "User Account: User Account Authentication",
+      "Network Traffic: Network Traffic Content",
+      "Active Directory: Active Directory Object Modification"
+    ],
+    "T1210": [
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1211": [
+      "Process: Process Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1212": [
+      "Application Log: Application Log Content",
+      "User Account: User Account Authentication",
+      "Process: Process Creation"
+    ],
+    "T1213": [
+      "Logon Session: Logon Session Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1213.001": [
+      "Application Log: Application Log Content",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1213.002": [
+      "Application Log: Application Log Content",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1213.003": [
+      "Application Log: Application Log Content",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1216": [
+      "Command: Command Execution",
+      "Script: Script Execution",
+      "Process: Process Creation"
+    ],
+    "T1216.001": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Script: Script Execution"
+    ],
+    "T1217": [
+      "Process: Process Creation",
+      "File: File Access",
+      "Command: Command Execution"
+    ],
+    "T1218": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "Module: Module Load",
+      "Process: Process Creation",
+      "File: File Creation",
+      "Network Traffic: Network Connection Creation",
+      "Process: OS API Execution"
+    ],
+    "T1218.001": [
+      "File: File Creation",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1218.002": [
+      "Windows Registry: Windows Registry Key Modification",
+      "File: File Creation",
+      "Process: Process Creation",
+      "Module: Module Load",
+      "Process: OS API Execution",
+      "Command: Command Execution"
+    ],
+    "T1218.003": [
+      "Network Traffic: Network Connection Creation",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1218.004": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1218.005": [
+      "Process: Process Creation",
+      "File: File Creation",
+      "Network Traffic: Network Connection Creation",
+      "Command: Command Execution"
+    ],
+    "T1218.007": [
+      "Module: Module Load",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1218.008": [
+      "Command: Command Execution",
+      "Module: Module Load",
+      "Process: Process Creation"
+    ],
+    "T1218.009": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1218.010": [
+      "Network Traffic: Network Connection Creation",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Module: Module Load"
+    ],
+    "T1218.011": [
+      "Process: Process Creation",
+      "File: File Metadata",
+      "Command: Command Execution",
+      "Module: Module Load"
+    ],
+    "T1218.012": [
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1218.013": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1218.014": [
+      "Process: Process Creation",
+      "File: File Creation",
+      "Command: Command Execution"
+    ],
+    "T1219": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation",
+      "Process: Process Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1220": [
+      "Process: Process Creation",
+      "Module: Module Load"
+    ],
+    "T1221": [
+      "Process: Process Creation",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1222": [
+      "File: File Metadata",
+      "Process: Process Creation",
+      "Active Directory: Active Directory Object Modification",
+      "Command: Command Execution"
+    ],
+    "T1222.001": [
+      "Active Directory: Active Directory Object Modification",
+      "File: File Metadata",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1222.002": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "File: File Metadata"
+    ],
+    "T1480": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1480.001": [
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1482": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Content",
+      "Script: Script Execution",
+      "Process: OS API Execution"
+    ],
+    "T1484": [
+      "Active Directory: Active Directory Object Modification",
+      "Command: Command Execution",
+      "Active Directory: Active Directory Object Deletion",
+      "Active Directory: Active Directory Object Creation"
+    ],
+    "T1484.001": [
+      "Active Directory: Active Directory Object Creation",
+      "Command: Command Execution",
+      "Active Directory: Active Directory Object Deletion",
+      "Active Directory: Active Directory Object Modification"
+    ],
+    "T1484.002": [
+      "Active Directory: Active Directory Object Modification",
+      "Active Directory: Active Directory Object Creation",
+      "Command: Command Execution"
+    ],
+    "T1485": [
+      "Instance: Instance Deletion",
+      "Image: Image Deletion",
+      "Snapshot: Snapshot Deletion",
+      "File: File Deletion",
+      "Cloud Storage: Cloud Storage Deletion",
+      "Process: Process Creation",
+      "File: File Modification",
+      "Command: Command Execution",
+      "Volume: Volume Deletion"
+    ],
+    "T1486": [
+      "File: File Creation",
+      "File: File Modification",
+      "Network Share: Network Share Access",
+      "Command: Command Execution",
+      "Cloud Storage: Cloud Storage Modification",
+      "Process: Process Creation"
+    ],
+    "T1489": [
+      "Process: Process Creation",
+      "Process: Process Termination",
+      "Command: Command Execution",
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Modification",
+      "Service: Service Metadata",
+      "Process: OS API Execution"
+    ],
+    "T1490": [
+      "Service: Service Metadata",
+      "Windows Registry: Windows Registry Key Modification",
+      "File: File Deletion",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1491": [
+      "File: File Modification",
+      "File: File Creation",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1491.001": [
+      "File: File Modification",
+      "Network Traffic: Network Traffic Content",
+      "File: File Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1491.002": [
+      "Network Traffic: Network Traffic Content",
+      "File: File Creation",
+      "File: File Modification",
+      "Application Log: Application Log Content"
+    ],
+    "T1495": [
+      "Firmware: Firmware Modification"
+    ],
+    "T1496": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation",
+      "File: File Creation",
+      "Sensor Health: Host Status",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1497": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Process: OS API Execution"
+    ],
+    "T1497.001": [
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1497.002": [
+      "Process: OS API Execution",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1497.003": [
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1498": [
+      "Sensor Health: Host Status",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1498.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Sensor Health: Host Status"
+    ],
+    "T1498.002": [
+      "Sensor Health: Host Status",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1499": [
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow",
+      "Sensor Health: Host Status",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1499.001": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Sensor Health: Host Status"
+    ],
+    "T1499.002": [
+      "Network Traffic: Network Traffic Content",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow",
+      "Sensor Health: Host Status"
+    ],
+    "T1499.003": [
+      "Network Traffic: Network Traffic Flow",
+      "Sensor Health: Host Status",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1499.004": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Sensor Health: Host Status",
+      "Application Log: Application Log Content"
+    ],
+    "T1505": [
+      "Process: Process Creation",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Content",
+      "File: File Modification",
+      "Network Traffic: Network Traffic Flow",
+      "File: File Creation"
+    ],
+    "T1505.001": [
+      "Application Log: Application Log Content"
+    ],
+    "T1505.002": [
+      "File: File Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1505.003": [
+      "Network Traffic: Network Traffic Content",
+      "File: File Modification",
+      "Network Traffic: Network Traffic Flow",
+      "Application Log: Application Log Content",
+      "File: File Creation",
+      "Process: Process Creation"
+    ],
+    "T1505.004": [
+      "Command: Command Execution",
+      "File: File Modification",
+      "File: File Creation"
+    ],
+    "T1505.005": [
+      "Module: Module Load",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "File: File Modification"
+    ],
+    "T1518": [
+      "Process: OS API Execution",
+      "Firewall: Firewall Enumeration",
+      "Command: Command Execution",
+      "Firewall: Firewall Metadata",
+      "Process: Process Creation"
+    ],
+    "T1518.001": [
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Firewall: Firewall Enumeration",
+      "Firewall: Firewall Metadata"
+    ],
+    "T1525": [
+      "Image: Image Creation",
+      "Image: Image Metadata",
+      "Image: Image Modification"
+    ],
+    "T1526": [
+      "Cloud Service: Cloud Service Enumeration"
+    ],
+    "T1528": [
+      "User Account: User Account Modification"
+    ],
+    "T1529": [
+      "Process: Process Creation",
+      "Sensor Health: Host Status",
+      "Command: Command Execution"
+    ],
+    "T1530": [
+      "Cloud Storage: Cloud Storage Access"
+    ],
+    "T1531": [
+      "User Account: User Account Modification",
+      "Active Directory: Active Directory Object Modification",
+      "User Account: User Account Deletion"
+    ],
+    "T1534": [
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1535": [
+      "Instance: Instance Creation",
+      "Instance: Instance Metadata"
+    ],
+    "T1537": [
+      "Network Traffic: Network Traffic Content",
+      "Snapshot: Snapshot Modification",
+      "Cloud Storage: Cloud Storage Metadata",
+      "Cloud Storage: Cloud Storage Creation",
+      "Cloud Storage: Cloud Storage Modification",
+      "Snapshot: Snapshot Metadata",
+      "Snapshot: Snapshot Creation"
+    ],
+    "T1538": [
+      "Logon Session: Logon Session Creation",
+      "User Account: User Account Authentication"
+    ],
+    "T1539": [
+      "File: File Access",
+      "Process: Process Access"
+    ],
+    "T1542": [
+      "Driver: Driver Metadata",
+      "Process: OS API Execution",
+      "Drive: Drive Modification",
+      "Command: Command Execution",
+      "Network Traffic: Network Connection Creation",
+      "Firmware: Firmware Modification"
+    ],
+    "T1542.001": [
+      "Firmware: Firmware Modification"
+    ],
+    "T1542.002": [
+      "Firmware: Firmware Modification",
+      "Process: OS API Execution",
+      "Driver: Driver Metadata"
+    ],
+    "T1542.003": [
+      "Drive: Drive Modification"
+    ],
+    "T1542.004": [
+      "Firmware: Firmware Modification"
+    ],
+    "T1542.005": [
+      "Command: Command Execution",
+      "Firmware: Firmware Modification",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1543": [
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "File: File Modification",
+      "Driver: Driver Load",
+      "Process: OS API Execution",
+      "File: File Creation",
+      "Service: Service Modification",
+      "Command: Command Execution",
+      "Service: Service Creation"
+    ],
+    "T1543.001": [
+      "File: File Modification",
+      "File: File Creation",
+      "Service: Service Creation",
+      "Command: Command Execution",
+      "Service: Service Modification"
+    ],
+    "T1543.002": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Service: Service Creation",
+      "File: File Creation",
+      "File: File Modification",
+      "Service: Service Modification"
+    ],
+    "T1543.003": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Driver: Driver Load",
+      "Service: Service Modification",
+      "Windows Registry: Windows Registry Key Creation",
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Service: Service Creation"
+    ],
+    "T1543.004": [
+      "Process: Process Creation",
+      "File: File Modification",
+      "Service: Service Modification",
+      "Command: Command Execution",
+      "File: File Creation",
+      "Service: Service Creation"
+    ],
+    "T1546": [
+      "File: File Metadata",
+      "File: File Creation",
+      "Process: Process Creation",
+      "WMI: WMI Creation",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification",
+      "File: File Modification",
+      "Command: Command Execution",
+      "Cloud Service: Cloud Service Modification"
+    ],
+    "T1546.001": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1546.002": [
+      "Windows Registry: Windows Registry Key Modification",
+      "File: File Modification",
+      "File: File Creation",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1546.003": [
+      "Process: Process Creation",
+      "WMI: WMI Creation",
+      "Command: Command Execution"
+    ],
+    "T1546.004": [
+      "Process: Process Creation",
+      "File: File Modification",
+      "Command: Command Execution",
+      "File: File Creation"
+    ],
+    "T1546.005": [
+      "Command: Command Execution",
+      "File: File Modification",
+      "Process: Process Creation",
+      "File: File Creation"
+    ],
+    "T1546.006": [
+      "Process: Process Creation",
+      "File: File Modification",
+      "Command: Command Execution",
+      "Module: Module Load",
+      "File: File Metadata"
+    ],
+    "T1546.007": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Module: Module Load"
+    ],
+    "T1546.008": [
+      "File: File Modification",
+      "File: File Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1546.009": [
+      "Process: Process Creation",
+      "Process: OS API Execution",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "Module: Module Load"
+    ],
+    "T1546.010": [
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1546.011": [
+      "Process: Process Creation",
+      "Module: Module Load",
+      "File: File Modification",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1546.012": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1546.013": [
+      "File: File Modification",
+      "File: File Creation",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1546.014": [
+      "File: File Modification",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Creation"
+    ],
+    "T1546.015": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Module: Module Load"
+    ],
+    "T1546.016": [
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "File: File Creation"
+    ],
+    "T1547": [
+      "Process: Process Creation",
+      "Driver: Driver Load",
+      "Windows Registry: Windows Registry Key Creation",
+      "Kernel: Kernel Module Load",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "File: File Creation",
+      "File: File Modification",
+      "Process: OS API Execution"
+    ],
+    "T1547.001": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "File: File Modification",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Creation"
+    ],
+    "T1547.002": [
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Modification",
+      "Module: Module Load"
+    ],
+    "T1547.003": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation",
+      "Module: Module Load",
+      "Command: Command Execution"
+    ],
+    "T1547.004": [
+      "Command: Command Execution",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1547.005": [
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Modification",
+      "Module: Module Load"
+    ],
+    "T1547.006": [
+      "File: File Creation",
+      "File: File Modification",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Kernel: Kernel Module Load"
+    ],
+    "T1547.007": [
+      "File: File Modification",
+      "Command: Command Execution"
+    ],
+    "T1547.008": [
+      "Driver: Driver Load",
+      "Module: Module Load",
+      "File: File Creation",
+      "File: File Modification"
+    ],
+    "T1547.009": [
+      "Process: Process Creation",
+      "File: File Creation",
+      "File: File Modification"
+    ],
+    "T1547.010": [
+      "File: File Creation",
+      "Process: OS API Execution",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1547.012": [
+      "Module: Module Load",
+      "Driver: Driver Load",
+      "File: File Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: OS API Execution"
+    ],
+    "T1547.013": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Modification",
+      "File: File Creation"
+    ],
+    "T1547.014": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Creation"
+    ],
+    "T1547.015": [
+      "File: File Modification",
+      "Process: Process Creation",
+      "File: File Creation"
+    ],
+    "T1548": [
+      "Command: Command Execution",
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Metadata",
+      "Process: Process Creation",
+      "Process: OS API Execution",
+      "File: File Metadata"
+    ],
+    "T1548.001": [
+      "File: File Modification",
+      "File: File Metadata",
+      "Command: Command Execution"
+    ],
+    "T1548.002": [
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Metadata",
+      "Command: Command Execution"
+    ],
+    "T1548.003": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Process: Process Metadata",
+      "File: File Modification"
+    ],
+    "T1548.004": [
+      "Process: OS API Execution",
+      "Process: Process Creation"
+    ],
+    "T1550": [
+      "Active Directory: Active Directory Credential Request",
+      "User Account: User Account Authentication",
+      "Web Credential: Web Credential Usage",
+      "Logon Session: Logon Session Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1550.001": [
+      "Web Credential: Web Credential Usage"
+    ],
+    "T1550.002": [
+      "Active Directory: Active Directory Credential Request",
+      "Logon Session: Logon Session Creation",
+      "User Account: User Account Authentication"
+    ],
+    "T1550.003": [
+      "User Account: User Account Authentication",
+      "Active Directory: Active Directory Credential Request",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1550.004": [
+      "Web Credential: Web Credential Usage",
+      "Application Log: Application Log Content"
+    ],
+    "T1552": [
+      "Windows Registry: Windows Registry Key Access",
+      "Command: Command Execution",
+      "User Account: User Account Authentication",
+      "Process: Process Creation",
+      "File: File Access"
+    ],
+    "T1552.001": [
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1552.002": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Access"
+    ],
+    "T1552.003": [
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1552.004": [
+      "File: File Access",
+      "Command: Command Execution"
+    ],
+    "T1552.005": [
+      "User Account: User Account Authentication"
+    ],
+    "T1552.006": [
+      "Command: Command Execution",
+      "File: File Access"
+    ],
+    "T1552.007": [
+      "Command: Command Execution",
+      "User Account: User Account Authentication"
+    ],
+    "T1553": [
+      "Module: Module Load",
+      "File: File Metadata",
+      "Windows Registry: Windows Registry Key Modification",
+      "Windows Registry: Windows Registry Key Creation",
+      "Command: Command Execution",
+      "File: File Modification",
+      "Process: Process Creation"
+    ],
+    "T1553.001": [
+      "Command: Command Execution",
+      "File: File Modification",
+      "Process: Process Creation",
+      "File: File Metadata"
+    ],
+    "T1553.002": [
+      "File: File Metadata"
+    ],
+    "T1553.003": [
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Modification",
+      "Module: Module Load"
+    ],
+    "T1553.004": [
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Creation",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1553.005": [
+      "File: File Creation",
+      "File: File Metadata"
+    ],
+    "T1553.006": [
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution"
+    ],
+    "T1554": [
+      "File: File Deletion",
+      "File: File Metadata",
+      "File: File Creation",
+      "File: File Modification"
+    ],
+    "T1555": [
+      "Process: Process Access",
+      "Process: OS API Execution",
+      "File: File Access",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1555.001": [
+      "File: File Access",
+      "Command: Command Execution",
+      "Process: OS API Execution",
+      "Process: Process Creation"
+    ],
+    "T1555.002": [
+      "Process: Process Access",
+      "Command: Command Execution"
+    ],
+    "T1555.003": [
+      "File: File Access",
+      "Process: OS API Execution",
+      "Process: Process Access",
+      "Command: Command Execution"
+    ],
+    "T1555.004": [
+      "File: File Access",
+      "Process: OS API Execution",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1555.005": [
+      "File: File Access",
+      "Process: Process Access",
+      "Process: OS API Execution",
+      "Command: Command Execution"
+    ],
+    "T1556": [
+      "Windows Registry: Windows Registry Key Modification",
+      "User Account: User Account Modification",
+      "User Account: User Account Authentication",
+      "Module: Module Load",
+      "File: File Creation",
+      "Logon Session: Logon Session Creation",
+      "File: File Modification",
+      "Application Log: Application Log Content",
+      "Process: OS API Execution",
+      "Active Directory: Active Directory Object Modification",
+      "Process: Process Access"
+    ],
+    "T1556.001": [
+      "Process: Process Access",
+      "Logon Session: Logon Session Creation",
+      "File: File Modification",
+      "Process: OS API Execution"
+    ],
+    "T1556.002": [
+      "File: File Creation",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1556.003": [
+      "Logon Session: Logon Session Creation",
+      "File: File Modification"
+    ],
+    "T1556.004": [
+      "File: File Modification"
+    ],
+    "T1556.005": [
+      "User Account: User Account Metadata",
+      "Active Directory: Active Directory Object Modification",
+      "Script: Script Execution",
+      "Command: Command Execution"
+    ],
+    "T1556.006": [
+      "User Account: User Account Modification",
+      "User Account: User Account Authentication",
+      "Active Directory: Active Directory Object Modification",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1556.007": [
+      "Module: Module Load",
+      "File: File Modification",
+      "Logon Session: Logon Session Creation",
+      "Application Log: Application Log Content"
+    ],
+    "T1557": [
+      "Application Log: Application Log Content",
+      "Service: Service Creation",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1557.001": [
+      "Network Traffic: Network Traffic Content",
+      "Windows Registry: Windows Registry Key Modification",
+      "Network Traffic: Network Traffic Flow",
+      "Service: Service Creation"
+    ],
+    "T1557.002": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1557.003": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Application Log: Application Log Content"
+    ],
+    "T1558": [
+      "Command: Command Execution",
+      "Logon Session: Logon Session Metadata",
+      "Active Directory: Active Directory Credential Request",
+      "File: File Access"
+    ],
+    "T1558.001": [
+      "Active Directory: Active Directory Credential Request",
+      "Logon Session: Logon Session Metadata"
+    ],
+    "T1558.002": [
+      "Logon Session: Logon Session Metadata"
+    ],
+    "T1558.003": [
+      "Active Directory: Active Directory Credential Request"
+    ],
+    "T1558.004": [
+      "Active Directory: Active Directory Credential Request"
+    ],
+    "T1559": [
+      "Script: Script Execution",
+      "Module: Module Load",
+      "Process: Process Access",
+      "Process: Process Creation"
+    ],
+    "T1559.001": [
+      "Script: Script Execution",
+      "Module: Module Load",
+      "Process: Process Creation"
+    ],
+    "T1559.002": [
+      "Script: Script Execution",
+      "Module: Module Load",
+      "Process: Process Creation"
+    ],
+    "T1559.003": [
+      "Process: Process Access"
+    ],
+    "T1560": [
+      "Script: Script Execution",
+      "File: File Creation",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1560.001": [
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Creation"
+    ],
+    "T1560.002": [
+      "File: File Creation",
+      "Script: Script Execution"
+    ],
+    "T1560.003": [
+      "Script: Script Execution",
+      "File: File Creation"
+    ],
+    "T1561": [
+      "Drive: Drive Access",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Driver: Driver Load",
+      "Drive: Drive Modification"
+    ],
+    "T1561.001": [
+      "Driver: Driver Load",
+      "Drive: Drive Modification",
+      "Drive: Drive Access",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1561.002": [
+      "Drive: Drive Access",
+      "Drive: Drive Modification",
+      "Command: Command Execution",
+      "Driver: Driver Load",
+      "Process: Process Creation"
+    ],
+    "T1562": [
+      "Cloud Service: Cloud Service Modification",
+      "Firewall: Firewall Rule Modification",
+      "Process: Process Termination",
+      "Service: Service Metadata",
+      "Process: Process Creation",
+      "Driver: Driver Load",
+      "Firewall: Firewall Disable",
+      "Command: Command Execution",
+      "Cloud Service: Cloud Service Disable",
+      "Windows Registry: Windows Registry Key Deletion",
+      "Windows Registry: Windows Registry Key Modification",
+      "Sensor Health: Host Status",
+      "Script: Script Execution"
+    ],
+    "T1562.001": [
+      "Windows Registry: Windows Registry Key Deletion",
+      "Driver: Driver Load",
+      "Windows Registry: Windows Registry Key Modification",
+      "Service: Service Metadata",
+      "Command: Command Execution",
+      "Process: Process Termination",
+      "Sensor Health: Host Status"
+    ],
+    "T1562.002": [
+      "Command: Command Execution",
+      "Sensor Health: Host Status",
+      "Application Log: Application Log Content",
+      "Script: Script Execution",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Creation"
+    ],
+    "T1562.003": [
+      "Sensor Health: Host Status",
+      "Command: Command Execution"
+    ],
+    "T1562.004": [
+      "Firewall: Firewall Disable",
+      "Firewall: Firewall Rule Modification",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1562.006": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "Sensor Health: Host Status"
+    ],
+    "T1562.007": [
+      "Firewall: Firewall Disable",
+      "Firewall: Firewall Rule Modification"
+    ],
+    "T1562.008": [
+      "Cloud Service: Cloud Service Modification",
+      "Cloud Service: Cloud Service Disable"
+    ],
+    "T1562.009": [
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation"
+    ],
+    "T1562.010": [
+      "Process: Process Metadata",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1563": [
+      "Process: Process Creation",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Command: Command Execution",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1563.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Logon Session: Logon Session Creation"
+    ],
+    "T1563.002": [
+      "Network Traffic: Network Traffic Content",
+      "Process: Process Creation",
+      "Command: Command Execution",
+      "Logon Session: Logon Session Creation",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1564": [
+      "File: File Creation",
+      "File: File Metadata",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Application Log: Application Log Content",
+      "Script: Script Execution",
+      "Windows Registry: Windows Registry Key Modification",
+      "Firmware: Firmware Modification",
+      "Process: OS API Execution",
+      "User Account: User Account Creation",
+      "User Account: User Account Metadata",
+      "File: File Modification",
+      "Service: Service Creation"
+    ],
+    "T1564.001": [
+      "Process: Process Creation",
+      "File: File Metadata",
+      "Command: Command Execution",
+      "File: File Creation"
+    ],
+    "T1564.002": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "User Account: User Account Metadata",
+      "User Account: User Account Creation",
+      "File: File Modification",
+      "Process: Process Creation"
+    ],
+    "T1564.003": [
+      "Process: Process Creation",
+      "Script: Script Execution",
+      "File: File Modification",
+      "Command: Command Execution"
+    ],
+    "T1564.004": [
+      "Command: Command Execution",
+      "File: File Metadata",
+      "File: File Modification",
+      "Process: OS API Execution"
+    ],
+    "T1564.005": [
+      "File: File Modification",
+      "Windows Registry: Windows Registry Key Modification",
+      "Firmware: Firmware Modification"
+    ],
+    "T1564.006": [
+      "Service: Service Creation",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation",
+      "Image: Image Metadata",
+      "File: File Creation",
+      "Command: Command Execution"
+    ],
+    "T1564.007": [
+      "Script: Script Execution",
+      "File: File Metadata"
+    ],
+    "T1564.008": [
+      "File: File Modification",
+      "Application Log: Application Log Content",
+      "Command: Command Execution"
+    ],
+    "T1564.009": [
+      "File: File Creation",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Metadata"
+    ],
+    "T1564.010": [
+      "Process: Process Creation"
+    ],
+    "T1565": [
+      "Network Traffic: Network Traffic Content",
+      "File: File Deletion",
+      "Process: OS API Execution",
+      "File: File Modification",
+      "Network Traffic: Network Traffic Flow",
+      "File: File Creation",
+      "File: File Metadata"
+    ],
+    "T1565.001": [
+      "File: File Creation",
+      "File: File Modification",
+      "File: File Deletion"
+    ],
+    "T1565.002": [
+      "Network Traffic: Network Traffic Content",
+      "Process: OS API Execution",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1565.003": [
+      "File: File Deletion",
+      "Process: OS API Execution",
+      "File: File Modification",
+      "File: File Creation",
+      "File: File Metadata"
+    ],
+    "T1566": [
+      "File: File Creation",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow",
+      "Application Log: Application Log Content"
+    ],
+    "T1566.001": [
+      "Application Log: Application Log Content",
+      "File: File Creation",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1566.002": [
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1566.003": [
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1567": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow",
+      "File: File Access",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1567.001": [
+      "File: File Access",
+      "Network Traffic: Network Traffic Content",
+      "Command: Command Execution",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1567.002": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow",
+      "File: File Access",
+      "Network Traffic: Network Traffic Content",
+      "Command: Command Execution"
+    ],
+    "T1568": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1568.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1568.002": [
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1568.003": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1569": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Modification",
+      "Service: Service Creation"
+    ],
+    "T1569.001": [
+      "Process: Process Creation",
+      "File: File Modification",
+      "Service: Service Creation",
+      "Command: Command Execution"
+    ],
+    "T1569.002": [
+      "Command: Command Execution",
+      "Service: Service Creation",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1570": [
+      "Network Traffic: Network Traffic Content",
+      "Named Pipe: Named Pipe Metadata",
+      "File: File Creation",
+      "File: File Metadata",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "Network Share: Network Share Access",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1571": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1572": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1573": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1573.001": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1573.002": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1574": [
+      "Service: Service Metadata",
+      "File: File Modification",
+      "Module: Module Load",
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation",
+      "File: File Creation",
+      "Command: Command Execution"
+    ],
+    "T1574.001": [
+      "Module: Module Load",
+      "File: File Modification",
+      "File: File Creation"
+    ],
+    "T1574.002": [
+      "File: File Modification",
+      "File: File Creation",
+      "Module: Module Load",
+      "Process: Process Creation"
+    ],
+    "T1574.004": [
+      "File: File Modification",
+      "File: File Creation",
+      "Module: Module Load"
+    ],
+    "T1574.005": [
+      "Service: Service Metadata",
+      "File: File Modification",
+      "Module: Module Load",
+      "Process: Process Creation",
+      "File: File Creation"
+    ],
+    "T1574.006": [
+      "Module: Module Load",
+      "Command: Command Execution",
+      "Process: Process Creation",
+      "File: File Creation",
+      "File: File Modification"
+    ],
+    "T1574.007": [
+      "File: File Creation",
+      "Process: Process Creation",
+      "Windows Registry: Windows Registry Key Modification"
+    ],
+    "T1574.008": [
+      "File: File Creation",
+      "Process: Process Creation",
+      "File: File Modification"
+    ],
+    "T1574.009": [
+      "File: File Creation",
+      "File: File Modification",
+      "Process: Process Creation"
+    ],
+    "T1574.010": [
+      "Service: Service Metadata",
+      "Process: Process Creation",
+      "File: File Creation",
+      "File: File Modification"
+    ],
+    "T1574.011": [
+      "Service: Service Modification",
+      "Windows Registry: Windows Registry Key Modification",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1574.012": [
+      "Windows Registry: Windows Registry Key Modification",
+      "Process: Process Creation",
+      "Module: Module Load",
+      "Command: Command Execution"
+    ],
+    "T1574.013": [
+      "Process: OS API Execution"
+    ],
+    "T1578": [
+      "Instance: Instance Creation",
+      "Snapshot: Snapshot Creation",
+      "Snapshot: Snapshot Metadata",
+      "Snapshot: Snapshot Deletion",
+      "Volume: Volume Creation",
+      "Instance: Instance Start",
+      "Instance: Instance Modification",
+      "Volume: Volume Modification",
+      "Instance: Instance Stop",
+      "Instance: Instance Metadata",
+      "Instance: Instance Deletion",
+      "Snapshot: Snapshot Modification",
+      "Volume: Volume Deletion",
+      "Volume: Volume Metadata"
+    ],
+    "T1578.001": [
+      "Snapshot: Snapshot Metadata",
+      "Snapshot: Snapshot Creation"
+    ],
+    "T1578.002": [
+      "Instance: Instance Metadata",
+      "Instance: Instance Creation"
+    ],
+    "T1578.003": [
+      "Instance: Instance Metadata",
+      "Instance: Instance Deletion"
+    ],
+    "T1578.004": [
+      "Instance: Instance Modification",
+      "Instance: Instance Stop",
+      "Instance: Instance Metadata",
+      "Instance: Instance Start"
+    ],
+    "T1580": [
+      "Cloud Storage: Cloud Storage Enumeration",
+      "Instance: Instance Enumeration",
+      "Snapshot: Snapshot Enumeration",
+      "Volume: Volume Enumeration"
+    ],
+    "T1583": [
+      "Internet Scan: Response Metadata",
+      "Domain Name: Domain Registration",
+      "Internet Scan: Response Content",
+      "Domain Name: Passive DNS",
+      "Domain Name: Active DNS"
+    ],
+    "T1583.001": [
+      "Domain Name: Domain Registration",
+      "Domain Name: Passive DNS",
+      "Domain Name: Active DNS"
+    ],
+    "T1583.003": [
+      "Internet Scan: Response Metadata",
+      "Internet Scan: Response Content"
+    ],
+    "T1583.004": [
+      "Internet Scan: Response Metadata",
+      "Internet Scan: Response Content"
+    ],
+    "T1583.006": [
+      "Internet Scan: Response Content"
+    ],
+    "T1583.007": [
+      "Internet Scan: Response Content"
+    ],
+    "T1584": [
+      "Domain Name: Active DNS",
+      "Internet Scan: Response Metadata",
+      "Internet Scan: Response Content",
+      "Domain Name: Passive DNS",
+      "Domain Name: Domain Registration"
+    ],
+    "T1584.001": [
+      "Domain Name: Active DNS",
+      "Domain Name: Passive DNS",
+      "Domain Name: Domain Registration"
+    ],
+    "T1584.002": [
+      "Domain Name: Passive DNS",
+      "Domain Name: Active DNS"
+    ],
+    "T1584.003": [
+      "Internet Scan: Response Metadata",
+      "Internet Scan: Response Content"
+    ],
+    "T1584.004": [
+      "Internet Scan: Response Metadata",
+      "Internet Scan: Response Content"
+    ],
+    "T1584.006": [
+      "Internet Scan: Response Content"
+    ],
+    "T1584.007": [
+      "Internet Scan: Response Content"
+    ],
+    "T1585": [
+      "Network Traffic: Network Traffic Content",
+      "Persona: Social Media"
+    ],
+    "T1585.001": [
+      "Network Traffic: Network Traffic Content",
+      "Persona: Social Media"
+    ],
+    "T1586": [
+      "Persona: Social Media",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1586.001": [
+      "Persona: Social Media",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1587": [
+      "Internet Scan: Response Content",
+      "Malware Repository: Malware Metadata",
+      "Malware Repository: Malware Content"
+    ],
+    "T1587.001": [
+      "Malware Repository: Malware Content",
+      "Malware Repository: Malware Metadata"
+    ],
+    "T1587.002": [
+      "Malware Repository: Malware Metadata"
+    ],
+    "T1587.003": [
+      "Internet Scan: Response Content"
+    ],
+    "T1588": [
+      "Internet Scan: Response Content",
+      "Malware Repository: Malware Metadata",
+      "Malware Repository: Malware Content",
+      "Certificate: Certificate Registration"
+    ],
+    "T1588.001": [
+      "Malware Repository: Malware Content",
+      "Malware Repository: Malware Metadata"
+    ],
+    "T1588.002": [
+      "Malware Repository: Malware Metadata"
+    ],
+    "T1588.003": [
+      "Malware Repository: Malware Metadata"
+    ],
+    "T1588.004": [
+      "Certificate: Certificate Registration",
+      "Internet Scan: Response Content"
+    ],
+    "T1589": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1589.002": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1592": [
+      "Internet Scan: Response Content"
+    ],
+    "T1592.001": [
+      "Internet Scan: Response Content"
+    ],
+    "T1592.002": [
+      "Internet Scan: Response Content"
+    ],
+    "T1592.004": [
+      "Internet Scan: Response Content"
+    ],
+    "T1594": [
+      "Application Log: Application Log Content"
+    ],
+    "T1595": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1595.001": [
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1595.002": [
+      "Network Traffic: Network Traffic Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1595.003": [
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1598": [
+      "Network Traffic: Network Traffic Content",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1598.001": [
+      "Network Traffic: Network Traffic Content",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1598.002": [
+      "Network Traffic: Network Traffic Content",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1598.003": [
+      "Network Traffic: Network Traffic Content",
+      "Application Log: Application Log Content",
+      "Network Traffic: Network Traffic Flow"
+    ],
+    "T1599": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1599.001": [
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1600": [
+      "File: File Modification"
+    ],
+    "T1600.001": [
+      "File: File Modification"
+    ],
+    "T1600.002": [
+      "File: File Modification"
+    ],
+    "T1601": [
+      "File: File Modification"
+    ],
+    "T1601.001": [
+      "File: File Modification"
+    ],
+    "T1601.002": [
+      "File: File Modification"
+    ],
+    "T1602": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1602.001": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1602.002": [
+      "Network Traffic: Network Connection Creation",
+      "Network Traffic: Network Traffic Content"
+    ],
+    "T1606": [
+      "Logon Session: Logon Session Creation",
+      "Web Credential: Web Credential Usage",
+      "Web Credential: Web Credential Creation"
+    ],
+    "T1606.001": [
+      "Logon Session: Logon Session Creation",
+      "Web Credential: Web Credential Usage"
+    ],
+    "T1606.002": [
+      "Web Credential: Web Credential Usage",
+      "Web Credential: Web Credential Creation",
+      "Logon Session: Logon Session Metadata",
+      "Logon Session: Logon Session Creation",
+      "User Account: User Account Authentication"
+    ],
+    "T1608": [
+      "Internet Scan: Response Content"
+    ],
+    "T1608.001": [
+      "Internet Scan: Response Content"
+    ],
+    "T1608.002": [
+      "Internet Scan: Response Content"
+    ],
+    "T1608.003": [
+      "Internet Scan: Response Content"
+    ],
+    "T1608.004": [
+      "Internet Scan: Response Content"
+    ],
+    "T1608.005": [
+      "Internet Scan: Response Content"
+    ],
+    "T1608.006": [
+      "Internet Scan: Response Content"
+    ],
+    "T1609": [
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1610": [
+      "Container: Container Start",
+      "Container: Container Creation",
+      "Pod: Pod Modification",
+      "Application Log: Application Log Content",
+      "Pod: Pod Creation"
+    ],
+    "T1611": [
+      "Process: Process Creation",
+      "Container: Container Creation",
+      "Process: OS API Execution",
+      "Volume: Volume Modification",
+      "Kernel: Kernel Module Load"
+    ],
+    "T1612": [
+      "Network Traffic: Network Traffic Content",
+      "Image: Image Creation",
+      "Network Traffic: Network Traffic Flow",
+      "Network Traffic: Network Connection Creation"
+    ],
+    "T1613": [
+      "Pod: Pod Enumeration",
+      "Container: Container Enumeration"
+    ],
+    "T1614": [
+      "Process: OS API Execution",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1614.001": [
+      "Windows Registry: Windows Registry Key Access",
+      "Command: Command Execution",
+      "Process: OS API Execution",
+      "Process: Process Creation"
+    ],
+    "T1615": [
+      "Network Traffic: Network Traffic Content",
+      "Command: Command Execution",
+      "Script: Script Execution",
+      "Process: Process Creation",
+      "Active Directory: Active Directory Object Access"
+    ],
+    "T1619": [
+      "Cloud Storage: Cloud Storage Enumeration",
+      "Cloud Storage: Cloud Storage Access"
+    ],
+    "T1620": [
+      "Script: Script Execution",
+      "Process: OS API Execution",
+      "Module: Module Load"
+    ],
+    "T1621": [
+      "Logon Session: Logon Session Metadata",
+      "Logon Session: Logon Session Creation",
+      "Application Log: Application Log Content",
+      "User Account: User Account Authentication"
+    ],
+    "T1622": [
+      "Application Log: Application Log Content",
+      "Process: OS API Execution",
+      "Command: Command Execution",
+      "Process: Process Creation"
+    ],
+    "T1647": [
+      "File: File Modification",
+      "Process: Process Creation",
+      "Command: Command Execution"
+    ],
+    "T1648": [
+      "Application Log: Application Log Content",
+      "Cloud Service: Cloud Service Modification"
+    ],
+    "T1649": [
+      "Logon Session: Logon Session Creation",
+      "Command: Command Execution",
+      "Windows Registry: Windows Registry Key Access",
+      "Application Log: Application Log Content",
+      "Active Directory: Active Directory Object Modification",
+      "Active Directory: Active Directory Credential Request",
+      "File: File Access"
+    ]
+  },
+  "technique_tactic_mapping": {
+    "T1001": [
+      "TA0011"
+    ],
+    "T1001.001": [
+      "TA0011"
+    ],
+    "T1001.002": [
+      "TA0011"
+    ],
+    "T1001.003": [
+      "TA0011"
+    ],
+    "T1003": [
+      "TA0006"
+    ],
+    "T1003.001": [
+      "TA0006"
+    ],
+    "T1003.002": [
+      "TA0006"
+    ],
+    "T1003.003": [
+      "TA0006"
+    ],
+    "T1003.004": [
+      "TA0006"
+    ],
+    "T1003.005": [
+      "TA0006"
+    ],
+    "T1003.006": [
+      "TA0006"
+    ],
+    "T1003.007": [
+      "TA0006"
+    ],
+    "T1003.008": [
+      "TA0006"
+    ],
+    "T1005": [
+      "TA0009"
+    ],
+    "T1006": [
+      "TA0005"
+    ],
+    "T1007": [
+      "TA0007"
+    ],
+    "T1008": [
+      "TA0011"
+    ],
+    "T1010": [
+      "TA0007"
+    ],
+    "T1011": [
+      "TA0010"
+    ],
+    "T1011.001": [
+      "TA0010"
+    ],
+    "T1012": [
+      "TA0007"
+    ],
+    "T1014": [
+      "TA0005"
+    ],
+    "T1016": [
+      "TA0007"
+    ],
+    "T1016.001": [
+      "TA0007"
+    ],
+    "T1018": [
+      "TA0007"
+    ],
+    "T1020": [
+      "TA0010"
+    ],
+    "T1020.001": [
+      "TA0010"
+    ],
+    "T1021": [
+      "TA0008"
+    ],
+    "T1021.001": [
+      "TA0008"
+    ],
+    "T1021.002": [
+      "TA0008"
+    ],
+    "T1021.003": [
+      "TA0008"
+    ],
+    "T1021.004": [
+      "TA0008"
+    ],
+    "T1021.005": [
+      "TA0008"
+    ],
+    "T1021.006": [
+      "TA0008"
+    ],
+    "T1025": [
+      "TA0009"
+    ],
+    "T1026": [
+      "TA0011"
+    ],
+    "T1027": [
+      "TA0005"
+    ],
+    "T1027.001": [
+      "TA0005"
+    ],
+    "T1027.002": [
+      "TA0005"
+    ],
+    "T1027.003": [
+      "TA0005"
+    ],
+    "T1027.004": [
+      "TA0005"
+    ],
+    "T1027.005": [
+      "TA0005"
+    ],
+    "T1027.006": [
+      "TA0005"
+    ],
+    "T1027.007": [
+      "TA0005"
+    ],
+    "T1027.008": [
+      "TA0005"
+    ],
+    "T1027.009": [
+      "TA0005"
+    ],
+    "T1029": [
+      "TA0010"
+    ],
+    "T1030": [
+      "TA0010"
+    ],
+    "T1033": [
+      "TA0007"
+    ],
+    "T1034": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1036": [
+      "TA0005"
+    ],
+    "T1036.001": [
+      "TA0005"
+    ],
+    "T1036.002": [
+      "TA0005"
+    ],
+    "T1036.003": [
+      "TA0005"
+    ],
+    "T1036.004": [
+      "TA0005"
+    ],
+    "T1036.005": [
+      "TA0005"
+    ],
+    "T1036.006": [
+      "TA0005"
+    ],
+    "T1036.007": [
+      "TA0005"
+    ],
+    "T1037": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1037.001": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1037.002": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1037.003": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1037.004": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1037.005": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1039": [
+      "TA0009"
+    ],
+    "T1040": [
+      "TA0006",
+      "TA0007"
+    ],
+    "T1041": [
+      "TA0010"
+    ],
+    "T1043": [
+      "TA0011"
+    ],
+    "T1046": [
+      "TA0007"
+    ],
+    "T1047": [
+      "TA0002"
+    ],
+    "T1048": [
+      "TA0010"
+    ],
+    "T1048.001": [
+      "TA0010"
+    ],
+    "T1048.002": [
+      "TA0010"
+    ],
+    "T1048.003": [
+      "TA0010"
+    ],
+    "T1049": [
+      "TA0007"
+    ],
+    "T1051": [
+      "TA0008"
+    ],
+    "T1052": [
+      "TA0010"
+    ],
+    "T1052.001": [
+      "TA0010"
+    ],
+    "T1053": [
+      "TA0002",
+      "TA0003",
+      "TA0004"
+    ],
+    "T1053.002": [
+      "TA0002",
+      "TA0003",
+      "TA0004"
+    ],
+    "T1053.003": [
+      "TA0002",
+      "TA0003",
+      "TA0004"
+    ],
+    "T1053.004": [
+      "TA0002",
+      "TA0003",
+      "TA0004"
+    ],
+    "T1053.005": [
+      "TA0002",
+      "TA0003",
+      "TA0004"
+    ],
+    "T1053.006": [
+      "TA0002",
+      "TA0003",
+      "TA0004"
+    ],
+    "T1053.007": [
+      "TA0002",
+      "TA0003",
+      "TA0004"
+    ],
+    "T1055": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.001": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.002": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.003": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.004": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.005": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.008": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.009": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.011": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.012": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.013": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.014": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1055.015": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1056": [
+      "TA0009",
+      "TA0006"
+    ],
+    "T1056.001": [
+      "TA0009",
+      "TA0006"
+    ],
+    "T1056.002": [
+      "TA0009",
+      "TA0006"
+    ],
+    "T1056.003": [
+      "TA0009",
+      "TA0006"
+    ],
+    "T1056.004": [
+      "TA0009",
+      "TA0006"
+    ],
+    "T1057": [
+      "TA0007"
+    ],
+    "T1059": [
+      "TA0002"
+    ],
+    "T1059.001": [
+      "TA0002"
+    ],
+    "T1059.002": [
+      "TA0002"
+    ],
+    "T1059.003": [
+      "TA0002"
+    ],
+    "T1059.004": [
+      "TA0002"
+    ],
+    "T1059.005": [
+      "TA0002"
+    ],
+    "T1059.006": [
+      "TA0002"
+    ],
+    "T1059.007": [
+      "TA0002"
+    ],
+    "T1059.008": [
+      "TA0002"
+    ],
+    "T1061": [
+      "TA0002"
+    ],
+    "T1062": [
+      "TA0003"
+    ],
+    "T1064": [
+      "TA0005",
+      "TA0002"
+    ],
+    "T1068": [
+      "TA0004"
+    ],
+    "T1069": [
+      "TA0007"
+    ],
+    "T1069.001": [
+      "TA0007"
+    ],
+    "T1069.002": [
+      "TA0007"
+    ],
+    "T1069.003": [
+      "TA0007"
+    ],
+    "T1070": [
+      "TA0005"
+    ],
+    "T1070.001": [
+      "TA0005"
+    ],
+    "T1070.002": [
+      "TA0005"
+    ],
+    "T1070.003": [
+      "TA0005"
+    ],
+    "T1070.004": [
+      "TA0005"
+    ],
+    "T1070.005": [
+      "TA0005"
+    ],
+    "T1070.006": [
+      "TA0005"
+    ],
+    "T1070.007": [
+      "TA0005"
+    ],
+    "T1070.008": [
+      "TA0005"
+    ],
+    "T1070.009": [
+      "TA0005"
+    ],
+    "T1071": [
+      "TA0011"
+    ],
+    "T1071.001": [
+      "TA0011"
+    ],
+    "T1071.002": [
+      "TA0011"
+    ],
+    "T1071.003": [
+      "TA0011"
+    ],
+    "T1071.004": [
+      "TA0011"
+    ],
+    "T1072": [
+      "TA0002",
+      "TA0008"
+    ],
+    "T1074": [
+      "TA0009"
+    ],
+    "T1074.001": [
+      "TA0009"
+    ],
+    "T1074.002": [
+      "TA0009"
+    ],
+    "T1078": [
+      "TA0005",
+      "TA0003",
+      "TA0004",
+      "TA0001"
+    ],
+    "T1078.001": [
+      "TA0005",
+      "TA0003",
+      "TA0004",
+      "TA0001"
+    ],
+    "T1078.002": [
+      "TA0005",
+      "TA0003",
+      "TA0004",
+      "TA0001"
+    ],
+    "T1078.003": [
+      "TA0005",
+      "TA0003",
+      "TA0004",
+      "TA0001"
+    ],
+    "T1078.004": [
+      "TA0005",
+      "TA0003",
+      "TA0004",
+      "TA0001"
+    ],
+    "T1080": [
+      "TA0008"
+    ],
+    "T1082": [
+      "TA0007"
+    ],
+    "T1083": [
+      "TA0007"
+    ],
+    "T1087": [
+      "TA0007"
+    ],
+    "T1087.001": [
+      "TA0007"
+    ],
+    "T1087.002": [
+      "TA0007"
+    ],
+    "T1087.003": [
+      "TA0007"
+    ],
+    "T1087.004": [
+      "TA0007"
+    ],
+    "T1090": [
+      "TA0011"
+    ],
+    "T1090.001": [
+      "TA0011"
+    ],
+    "T1090.002": [
+      "TA0011"
+    ],
+    "T1090.003": [
+      "TA0011"
+    ],
+    "T1090.004": [
+      "TA0011"
+    ],
+    "T1091": [
+      "TA0008",
+      "TA0001"
+    ],
+    "T1092": [
+      "TA0011"
+    ],
+    "T1095": [
+      "TA0011"
+    ],
+    "T1098": [
+      "TA0003"
+    ],
+    "T1098.001": [
+      "TA0003"
+    ],
+    "T1098.002": [
+      "TA0003"
+    ],
+    "T1098.003": [
+      "TA0003"
+    ],
+    "T1098.004": [
+      "TA0003"
+    ],
+    "T1098.005": [
+      "TA0003"
+    ],
+    "T1102": [
+      "TA0011"
+    ],
+    "T1102.001": [
+      "TA0011"
+    ],
+    "T1102.002": [
+      "TA0011"
+    ],
+    "T1102.003": [
+      "TA0011"
+    ],
+    "T1104": [
+      "TA0011"
+    ],
+    "T1105": [
+      "TA0011"
+    ],
+    "T1106": [
+      "TA0002"
+    ],
+    "T1108": [
+      "TA0005",
+      "TA0003"
+    ],
+    "T1110": [
+      "TA0006"
+    ],
+    "T1110.001": [
+      "TA0006"
+    ],
+    "T1110.002": [
+      "TA0006"
+    ],
+    "T1110.003": [
+      "TA0006"
+    ],
+    "T1110.004": [
+      "TA0006"
+    ],
+    "T1111": [
+      "TA0006"
+    ],
+    "T1112": [
+      "TA0005"
+    ],
+    "T1113": [
+      "TA0009"
+    ],
+    "T1114": [
+      "TA0009"
+    ],
+    "T1114.001": [
+      "TA0009"
+    ],
+    "T1114.002": [
+      "TA0009"
+    ],
+    "T1114.003": [
+      "TA0009"
+    ],
+    "T1115": [
+      "TA0009"
+    ],
+    "T1119": [
+      "TA0009"
+    ],
+    "T1120": [
+      "TA0007"
+    ],
+    "T1123": [
+      "TA0009"
+    ],
+    "T1124": [
+      "TA0007"
+    ],
+    "T1125": [
+      "TA0009"
+    ],
+    "T1127": [
+      "TA0005"
+    ],
+    "T1127.001": [
+      "TA0005"
+    ],
+    "T1129": [
+      "TA0002"
+    ],
+    "T1132": [
+      "TA0011"
+    ],
+    "T1132.001": [
+      "TA0011"
+    ],
+    "T1132.002": [
+      "TA0011"
+    ],
+    "T1133": [
+      "TA0003",
+      "TA0001"
+    ],
+    "T1134": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1134.001": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1134.002": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1134.003": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1134.004": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1134.005": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1135": [
+      "TA0007"
+    ],
+    "T1136": [
+      "TA0003"
+    ],
+    "T1136.001": [
+      "TA0003"
+    ],
+    "T1136.002": [
+      "TA0003"
+    ],
+    "T1136.003": [
+      "TA0003"
+    ],
+    "T1137": [
+      "TA0003"
+    ],
+    "T1137.001": [
+      "TA0003"
+    ],
+    "T1137.002": [
+      "TA0003"
+    ],
+    "T1137.003": [
+      "TA0003"
+    ],
+    "T1137.004": [
+      "TA0003"
+    ],
+    "T1137.005": [
+      "TA0003"
+    ],
+    "T1137.006": [
+      "TA0003"
+    ],
+    "T1140": [
+      "TA0005"
+    ],
+    "T1149": [
+      "TA0005"
+    ],
+    "T1153": [
+      "TA0002"
+    ],
+    "T1175": [
+      "TA0008",
+      "TA0002"
+    ],
+    "T1176": [
+      "TA0003"
+    ],
+    "T1185": [
+      "TA0009"
+    ],
+    "T1187": [
+      "TA0006"
+    ],
+    "T1189": [
+      "TA0001"
+    ],
+    "T1190": [
+      "TA0001"
+    ],
+    "T1195": [
+      "TA0001"
+    ],
+    "T1195.001": [
+      "TA0001"
+    ],
+    "T1195.002": [
+      "TA0001"
+    ],
+    "T1195.003": [
+      "TA0001"
+    ],
+    "T1197": [
+      "TA0005",
+      "TA0003"
+    ],
+    "T1199": [
+      "TA0001"
+    ],
+    "T1200": [
+      "TA0001"
+    ],
+    "T1201": [
+      "TA0007"
+    ],
+    "T1202": [
+      "TA0005"
+    ],
+    "T1203": [
+      "TA0002"
+    ],
+    "T1204": [
+      "TA0002"
+    ],
+    "T1204.001": [
+      "TA0002"
+    ],
+    "T1204.002": [
+      "TA0002"
+    ],
+    "T1204.003": [
+      "TA0002"
+    ],
+    "T1205": [
+      "TA0005",
+      "TA0003",
+      "TA0011"
+    ],
+    "T1205.001": [
+      "TA0005",
+      "TA0003",
+      "TA0011"
+    ],
+    "T1205.002": [
+      "TA0005",
+      "TA0003",
+      "TA0011"
+    ],
+    "T1207": [
+      "TA0005"
+    ],
+    "T1210": [
+      "TA0008"
+    ],
+    "T1211": [
+      "TA0005"
+    ],
+    "T1212": [
+      "TA0006"
+    ],
+    "T1213": [
+      "TA0009"
+    ],
+    "T1213.001": [
+      "TA0009"
+    ],
+    "T1213.002": [
+      "TA0009"
+    ],
+    "T1213.003": [
+      "TA0009"
+    ],
+    "T1216": [
+      "TA0005"
+    ],
+    "T1216.001": [
+      "TA0005"
+    ],
+    "T1217": [
+      "TA0007"
+    ],
+    "T1218": [
+      "TA0005"
+    ],
+    "T1218.001": [
+      "TA0005"
+    ],
+    "T1218.002": [
+      "TA0005"
+    ],
+    "T1218.003": [
+      "TA0005"
+    ],
+    "T1218.004": [
+      "TA0005"
+    ],
+    "T1218.005": [
+      "TA0005"
+    ],
+    "T1218.007": [
+      "TA0005"
+    ],
+    "T1218.008": [
+      "TA0005"
+    ],
+    "T1218.009": [
+      "TA0005"
+    ],
+    "T1218.010": [
+      "TA0005"
+    ],
+    "T1218.011": [
+      "TA0005"
+    ],
+    "T1218.012": [
+      "TA0005"
+    ],
+    "T1218.013": [
+      "TA0005"
+    ],
+    "T1218.014": [
+      "TA0005"
+    ],
+    "T1219": [
+      "TA0011"
+    ],
+    "T1220": [
+      "TA0005"
+    ],
+    "T1221": [
+      "TA0005"
+    ],
+    "T1222": [
+      "TA0005"
+    ],
+    "T1222.001": [
+      "TA0005"
+    ],
+    "T1222.002": [
+      "TA0005"
+    ],
+    "T1480": [
+      "TA0005"
+    ],
+    "T1480.001": [
+      "TA0005"
+    ],
+    "T1482": [
+      "TA0007"
+    ],
+    "T1484": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1484.001": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1484.002": [
+      "TA0005",
+      "TA0004"
+    ],
+    "T1485": [
+      "TA0040"
+    ],
+    "T1486": [
+      "TA0040"
+    ],
+    "T1489": [
+      "TA0040"
+    ],
+    "T1490": [
+      "TA0040"
+    ],
+    "T1491": [
+      "TA0040"
+    ],
+    "T1491.001": [
+      "TA0040"
+    ],
+    "T1491.002": [
+      "TA0040"
+    ],
+    "T1495": [
+      "TA0040"
+    ],
+    "T1496": [
+      "TA0040"
+    ],
+    "T1497": [
+      "TA0005",
+      "TA0007"
+    ],
+    "T1497.001": [
+      "TA0005",
+      "TA0007"
+    ],
+    "T1497.002": [
+      "TA0005",
+      "TA0007"
+    ],
+    "T1497.003": [
+      "TA0005",
+      "TA0007"
+    ],
+    "T1498": [
+      "TA0040"
+    ],
+    "T1498.001": [
+      "TA0040"
+    ],
+    "T1498.002": [
+      "TA0040"
+    ],
+    "T1499": [
+      "TA0040"
+    ],
+    "T1499.001": [
+      "TA0040"
+    ],
+    "T1499.002": [
+      "TA0040"
+    ],
+    "T1499.003": [
+      "TA0040"
+    ],
+    "T1499.004": [
+      "TA0040"
+    ],
+    "T1505": [
+      "TA0003"
+    ],
+    "T1505.001": [
+      "TA0003"
+    ],
+    "T1505.002": [
+      "TA0003"
+    ],
+    "T1505.003": [
+      "TA0003"
+    ],
+    "T1505.004": [
+      "TA0003"
+    ],
+    "T1505.005": [
+      "TA0003"
+    ],
+    "T1518": [
+      "TA0007"
+    ],
+    "T1518.001": [
+      "TA0007"
+    ],
+    "T1525": [
+      "TA0003"
+    ],
+    "T1526": [
+      "TA0007"
+    ],
+    "T1528": [
+      "TA0006"
+    ],
+    "T1529": [
+      "TA0040"
+    ],
+    "T1530": [
+      "TA0009"
+    ],
+    "T1531": [
+      "TA0040"
+    ],
+    "T1534": [
+      "TA0008"
+    ],
+    "T1535": [
+      "TA0005"
+    ],
+    "T1537": [
+      "TA0010"
+    ],
+    "T1538": [
+      "TA0007"
+    ],
+    "T1539": [
+      "TA0006"
+    ],
+    "T1542": [
+      "TA0005",
+      "TA0003"
+    ],
+    "T1542.001": [
+      "TA0003",
+      "TA0005"
+    ],
+    "T1542.002": [
+      "TA0003",
+      "TA0005"
+    ],
+    "T1542.003": [
+      "TA0003",
+      "TA0005"
+    ],
+    "T1542.004": [
+      "TA0005",
+      "TA0003"
+    ],
+    "T1542.005": [
+      "TA0005",
+      "TA0003"
+    ],
+    "T1543": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1543.001": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1543.002": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1543.003": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1543.004": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1546": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.001": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.002": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.003": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.004": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.005": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.006": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.007": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.008": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.009": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.010": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.011": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.012": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.013": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.014": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.015": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1546.016": [
+      "TA0004",
+      "TA0003"
+    ],
+    "T1547": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.001": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.002": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.003": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.004": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.005": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.006": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.007": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.008": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.009": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.010": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.012": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.013": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.014": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1547.015": [
+      "TA0003",
+      "TA0004"
+    ],
+    "T1548": [
+      "TA0004",
+      "TA0005"
+    ],
+    "T1548.001": [
+      "TA0004",
+      "TA0005"
+    ],
+    "T1548.002": [
+      "TA0004",
+      "TA0005"
+    ],
+    "T1548.003": [
+      "TA0004",
+      "TA0005"
+    ],
+    "T1548.004": [
+      "TA0004",
+      "TA0005"
+    ],
+    "T1550": [
+      "TA0005",
+      "TA0008"
+    ],
+    "T1550.001": [
+      "TA0005",
+      "TA0008"
+    ],
+    "T1550.002": [
+      "TA0005",
+      "TA0008"
+    ],
+    "T1550.003": [
+      "TA0005",
+      "TA0008"
+    ],
+    "T1550.004": [
+      "TA0005",
+      "TA0008"
+    ],
+    "T1552": [
+      "TA0006"
+    ],
+    "T1552.001": [
+      "TA0006"
+    ],
+    "T1552.002": [
+      "TA0006"
+    ],
+    "T1552.003": [
+      "TA0006"
+    ],
+    "T1552.004": [
+      "TA0006"
+    ],
+    "T1552.005": [
+      "TA0006"
+    ],
+    "T1552.006": [
+      "TA0006"
+    ],
+    "T1552.007": [
+      "TA0006"
+    ],
+    "T1553": [
+      "TA0005"
+    ],
+    "T1553.001": [
+      "TA0005"
+    ],
+    "T1553.002": [
+      "TA0005"
+    ],
+    "T1553.003": [
+      "TA0005"
+    ],
+    "T1553.004": [
+      "TA0005"
+    ],
+    "T1553.005": [
+      "TA0005"
+    ],
+    "T1553.006": [
+      "TA0005"
+    ],
+    "T1554": [
+      "TA0003"
+    ],
+    "T1555": [
+      "TA0006"
+    ],
+    "T1555.001": [
+      "TA0006"
+    ],
+    "T1555.002": [
+      "TA0006"
+    ],
+    "T1555.003": [
+      "TA0006"
+    ],
+    "T1555.004": [
+      "TA0006"
+    ],
+    "T1555.005": [
+      "TA0006"
+    ],
+    "T1556": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1556.001": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1556.002": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1556.003": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1556.004": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1556.005": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1556.006": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1556.007": [
+      "TA0006",
+      "TA0005",
+      "TA0003"
+    ],
+    "T1557": [
+      "TA0006",
+      "TA0009"
+    ],
+    "T1557.001": [
+      "TA0006",
+      "TA0009"
+    ],
+    "T1557.002": [
+      "TA0006",
+      "TA0009"
+    ],
+    "T1557.003": [
+      "TA0006",
+      "TA0009"
+    ],
+    "T1558": [
+      "TA0006"
+    ],
+    "T1558.001": [
+      "TA0006"
+    ],
+    "T1558.002": [
+      "TA0006"
+    ],
+    "T1558.003": [
+      "TA0006"
+    ],
+    "T1558.004": [
+      "TA0006"
+    ],
+    "T1559": [
+      "TA0002"
+    ],
+    "T1559.001": [
+      "TA0002"
+    ],
+    "T1559.002": [
+      "TA0002"
+    ],
+    "T1559.003": [
+      "TA0002"
+    ],
+    "T1560": [
+      "TA0009"
+    ],
+    "T1560.001": [
+      "TA0009"
+    ],
+    "T1560.002": [
+      "TA0009"
+    ],
+    "T1560.003": [
+      "TA0009"
+    ],
+    "T1561": [
+      "TA0040"
+    ],
+    "T1561.001": [
+      "TA0040"
+    ],
+    "T1561.002": [
+      "TA0040"
+    ],
+    "T1562": [
+      "TA0005"
+    ],
+    "T1562.001": [
+      "TA0005"
+    ],
+    "T1562.002": [
+      "TA0005"
+    ],
+    "T1562.003": [
+      "TA0005"
+    ],
+    "T1562.004": [
+      "TA0005"
+    ],
+    "T1562.006": [
+      "TA0005"
+    ],
+    "T1562.007": [
+      "TA0005"
+    ],
+    "T1562.008": [
+      "TA0005"
+    ],
+    "T1562.009": [
+      "TA0005"
+    ],
+    "T1562.010": [
+      "TA0005"
+    ],
+    "T1563": [
+      "TA0008"
+    ],
+    "T1563.001": [
+      "TA0008"
+    ],
+    "T1563.002": [
+      "TA0008"
+    ],
+    "T1564": [
+      "TA0005"
+    ],
+    "T1564.001": [
+      "TA0005"
+    ],
+    "T1564.002": [
+      "TA0005"
+    ],
+    "T1564.003": [
+      "TA0005"
+    ],
+    "T1564.004": [
+      "TA0005"
+    ],
+    "T1564.005": [
+      "TA0005"
+    ],
+    "T1564.006": [
+      "TA0005"
+    ],
+    "T1564.007": [
+      "TA0005"
+    ],
+    "T1564.008": [
+      "TA0005"
+    ],
+    "T1564.009": [
+      "TA0005"
+    ],
+    "T1564.010": [
+      "TA0005"
+    ],
+    "T1565": [
+      "TA0040"
+    ],
+    "T1565.001": [
+      "TA0040"
+    ],
+    "T1565.002": [
+      "TA0040"
+    ],
+    "T1565.003": [
+      "TA0040"
+    ],
+    "T1566": [
+      "TA0001"
+    ],
+    "T1566.001": [
+      "TA0001"
+    ],
+    "T1566.002": [
+      "TA0001"
+    ],
+    "T1566.003": [
+      "TA0001"
+    ],
+    "T1567": [
+      "TA0010"
+    ],
+    "T1567.001": [
+      "TA0010"
+    ],
+    "T1567.002": [
+      "TA0010"
+    ],
+    "T1568": [
+      "TA0011"
+    ],
+    "T1568.001": [
+      "TA0011"
+    ],
+    "T1568.002": [
+      "TA0011"
+    ],
+    "T1568.003": [
+      "TA0011"
+    ],
+    "T1569": [
+      "TA0002"
+    ],
+    "T1569.001": [
+      "TA0002"
+    ],
+    "T1569.002": [
+      "TA0002"
+    ],
+    "T1570": [
+      "TA0008"
+    ],
+    "T1571": [
+      "TA0011"
+    ],
+    "T1572": [
+      "TA0011"
+    ],
+    "T1573": [
+      "TA0011"
+    ],
+    "T1573.001": [
+      "TA0011"
+    ],
+    "T1573.002": [
+      "TA0011"
+    ],
+    "T1574": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.001": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.002": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.004": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.005": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.006": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.007": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.008": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.009": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.010": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.011": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.012": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1574.013": [
+      "TA0003",
+      "TA0004",
+      "TA0005"
+    ],
+    "T1578": [
+      "TA0005"
+    ],
+    "T1578.001": [
+      "TA0005"
+    ],
+    "T1578.002": [
+      "TA0005"
+    ],
+    "T1578.003": [
+      "TA0005"
+    ],
+    "T1578.004": [
+      "TA0005"
+    ],
+    "T1580": [
+      "TA0007"
+    ],
+    "T1583": [
+      "TA0042"
+    ],
+    "T1583.001": [
+      "TA0042"
+    ],
+    "T1583.002": [
+      "TA0042"
+    ],
+    "T1583.003": [
+      "TA0042"
+    ],
+    "T1583.004": [
+      "TA0042"
+    ],
+    "T1583.005": [
+      "TA0042"
+    ],
+    "T1583.006": [
+      "TA0042"
+    ],
+    "T1583.007": [
+      "TA0042"
+    ],
+    "T1584": [
+      "TA0042"
+    ],
+    "T1584.001": [
+      "TA0042"
+    ],
+    "T1584.002": [
+      "TA0042"
+    ],
+    "T1584.003": [
+      "TA0042"
+    ],
+    "T1584.004": [
+      "TA0042"
+    ],
+    "T1584.005": [
+      "TA0042"
+    ],
+    "T1584.006": [
+      "TA0042"
+    ],
+    "T1584.007": [
+      "TA0042"
+    ],
+    "T1585": [
+      "TA0042"
+    ],
+    "T1585.001": [
+      "TA0042"
+    ],
+    "T1585.002": [
+      "TA0042"
+    ],
+    "T1585.003": [
+      "TA0042"
+    ],
+    "T1586": [
+      "TA0042"
+    ],
+    "T1586.001": [
+      "TA0042"
+    ],
+    "T1586.002": [
+      "TA0042"
+    ],
+    "T1586.003": [
+      "TA0042"
+    ],
+    "T1587": [
+      "TA0042"
+    ],
+    "T1587.001": [
+      "TA0042"
+    ],
+    "T1587.002": [
+      "TA0042"
+    ],
+    "T1587.003": [
+      "TA0042"
+    ],
+    "T1587.004": [
+      "TA0042"
+    ],
+    "T1588": [
+      "TA0042"
+    ],
+    "T1588.001": [
+      "TA0042"
+    ],
+    "T1588.002": [
+      "TA0042"
+    ],
+    "T1588.003": [
+      "TA0042"
+    ],
+    "T1588.004": [
+      "TA0042"
+    ],
+    "T1588.005": [
+      "TA0042"
+    ],
+    "T1588.006": [
+      "TA0042"
+    ],
+    "T1589": [
+      "TA0043"
+    ],
+    "T1589.001": [
+      "TA0043"
+    ],
+    "T1589.002": [
+      "TA0043"
+    ],
+    "T1589.003": [
+      "TA0043"
+    ],
+    "T1590": [
+      "TA0043"
+    ],
+    "T1590.001": [
+      "TA0043"
+    ],
+    "T1590.002": [
+      "TA0043"
+    ],
+    "T1590.003": [
+      "TA0043"
+    ],
+    "T1590.004": [
+      "TA0043"
+    ],
+    "T1590.005": [
+      "TA0043"
+    ],
+    "T1590.006": [
+      "TA0043"
+    ],
+    "T1591": [
+      "TA0043"
+    ],
+    "T1591.001": [
+      "TA0043"
+    ],
+    "T1591.002": [
+      "TA0043"
+    ],
+    "T1591.003": [
+      "TA0043"
+    ],
+    "T1591.004": [
+      "TA0043"
+    ],
+    "T1592": [
+      "TA0043"
+    ],
+    "T1592.001": [
+      "TA0043"
+    ],
+    "T1592.002": [
+      "TA0043"
+    ],
+    "T1592.003": [
+      "TA0043"
+    ],
+    "T1592.004": [
+      "TA0043"
+    ],
+    "T1593": [
+      "TA0043"
+    ],
+    "T1593.001": [
+      "TA0043"
+    ],
+    "T1593.002": [
+      "TA0043"
+    ],
+    "T1593.003": [
+      "TA0043"
+    ],
+    "T1594": [
+      "TA0043"
+    ],
+    "T1595": [
+      "TA0043"
+    ],
+    "T1595.001": [
+      "TA0043"
+    ],
+    "T1595.002": [
+      "TA0043"
+    ],
+    "T1595.003": [
+      "TA0043"
+    ],
+    "T1596": [
+      "TA0043"
+    ],
+    "T1596.001": [
+      "TA0043"
+    ],
+    "T1596.002": [
+      "TA0043"
+    ],
+    "T1596.003": [
+      "TA0043"
+    ],
+    "T1596.004": [
+      "TA0043"
+    ],
+    "T1596.005": [
+      "TA0043"
+    ],
+    "T1597": [
+      "TA0043"
+    ],
+    "T1597.001": [
+      "TA0043"
+    ],
+    "T1597.002": [
+      "TA0043"
+    ],
+    "T1598": [
+      "TA0043"
+    ],
+    "T1598.001": [
+      "TA0043"
+    ],
+    "T1598.002": [
+      "TA0043"
+    ],
+    "T1598.003": [
+      "TA0043"
+    ],
+    "T1599": [
+      "TA0005"
+    ],
+    "T1599.001": [
+      "TA0005"
+    ],
+    "T1600": [
+      "TA0005"
+    ],
+    "T1600.001": [
+      "TA0005"
+    ],
+    "T1600.002": [
+      "TA0005"
+    ],
+    "T1601": [
+      "TA0005"
+    ],
+    "T1601.001": [
+      "TA0005"
+    ],
+    "T1601.002": [
+      "TA0005"
+    ],
+    "T1602": [
+      "TA0009"
+    ],
+    "T1602.001": [
+      "TA0009"
+    ],
+    "T1602.002": [
+      "TA0009"
+    ],
+    "T1606": [
+      "TA0006"
+    ],
+    "T1606.001": [
+      "TA0006"
+    ],
+    "T1606.002": [
+      "TA0006"
+    ],
+    "T1608": [
+      "TA0042"
+    ],
+    "T1608.001": [
+      "TA0042"
+    ],
+    "T1608.002": [
+      "TA0042"
+    ],
+    "T1608.003": [
+      "TA0042"
+    ],
+    "T1608.004": [
+      "TA0042"
+    ],
+    "T1608.005": [
+      "TA0042"
+    ],
+    "T1608.006": [
+      "TA0042"
+    ],
+    "T1609": [
+      "TA0002"
+    ],
+    "T1610": [
+      "TA0005",
+      "TA0002"
+    ],
+    "T1611": [
+      "TA0004"
+    ],
+    "T1612": [
+      "TA0005"
+    ],
+    "T1613": [
+      "TA0007"
+    ],
+    "T1614": [
+      "TA0007"
+    ],
+    "T1614.001": [
+      "TA0007"
+    ],
+    "T1615": [
+      "TA0007"
+    ],
+    "T1619": [
+      "TA0007"
+    ],
+    "T1620": [
+      "TA0005"
+    ],
+    "T1621": [
+      "TA0006"
+    ],
+    "T1622": [
+      "TA0005",
+      "TA0007"
+    ],
+    "T1647": [
+      "TA0005"
+    ],
+    "T1648": [
+      "TA0002"
+    ],
+    "T1649": [
+      "TA0006"
+    ]
+  },
+  "techniques": {
+    "T1001": "Data Obfuscation",
+    "T1001.001": "Junk Data",
+    "T1001.002": "Steganography",
+    "T1001.003": "Protocol Impersonation",
+    "T1003": "OS Credential Dumping",
+    "T1003.001": "LSASS Memory",
+    "T1003.002": "Security Account Manager",
+    "T1003.003": "NTDS",
+    "T1003.004": "LSA Secrets",
+    "T1003.005": "Cached Domain Credentials",
+    "T1003.006": "DCSync",
+    "T1003.007": "Proc Filesystem",
+    "T1003.008": "/etc/passwd and /etc/shadow",
+    "T1005": "Data from Local System",
+    "T1006": "Direct Volume Access",
+    "T1007": "System Service Discovery",
+    "T1008": "Fallback Channels",
+    "T1010": "Application Window Discovery",
+    "T1011": "Exfiltration Over Other Network Medium",
+    "T1011.001": "Exfiltration Over Bluetooth",
+    "T1012": "Query Registry",
+    "T1014": "Rootkit",
+    "T1016": "System Network Configuration Discovery",
+    "T1016.001": "Internet Connection Discovery",
+    "T1018": "Remote System Discovery",
+    "T1020": "Automated Exfiltration",
+    "T1020.001": "Traffic Duplication",
+    "T1021": "Remote Services",
+    "T1021.001": "Remote Desktop Protocol",
+    "T1021.002": "SMB/Windows Admin Shares",
+    "T1021.003": "Distributed Component Object Model",
+    "T1021.004": "SSH",
+    "T1021.005": "VNC",
+    "T1021.006": "Windows Remote Management",
+    "T1025": "Data from Removable Media",
+    "T1026": "Multiband Communication",
+    "T1027": "Obfuscated Files or Information",
+    "T1027.001": "Binary Padding",
+    "T1027.002": "Software Packing",
+    "T1027.003": "Steganography",
+    "T1027.004": "Compile After Delivery",
+    "T1027.005": "Indicator Removal from Tools",
+    "T1027.006": "HTML Smuggling",
+    "T1027.007": "Dynamic API Resolution",
+    "T1027.008": "Stripped Payloads",
+    "T1027.009": "Embedded Payloads",
+    "T1029": "Scheduled Transfer",
+    "T1030": "Data Transfer Size Limits",
+    "T1033": "System Owner/User Discovery",
+    "T1034": "Path Interception",
+    "T1036": "Masquerading",
+    "T1036.001": "Invalid Code Signature",
+    "T1036.002": "Right-to-Left Override",
+    "T1036.003": "Rename System Utilities",
+    "T1036.004": "Masquerade Task or Service",
+    "T1036.005": "Match Legitimate Name or Location",
+    "T1036.006": "Space after Filename",
+    "T1036.007": "Double File Extension",
+    "T1037": "Boot or Logon Initialization Scripts",
+    "T1037.001": "Logon Script (Windows)",
+    "T1037.002": "Login Hook",
+    "T1037.003": "Network Logon Script",
+    "T1037.004": "RC Scripts",
+    "T1037.005": "Startup Items",
+    "T1039": "Data from Network Shared Drive",
+    "T1040": "Network Sniffing",
+    "T1041": "Exfiltration Over C2 Channel",
+    "T1043": "Commonly Used Port",
+    "T1046": "Network Service Discovery",
+    "T1047": "Windows Management Instrumentation",
+    "T1048": "Exfiltration Over Alternative Protocol",
+    "T1048.001": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+    "T1048.002": "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+    "T1048.003": "Exfiltration Over Unencrypted Non-C2 Protocol",
+    "T1049": "System Network Connections Discovery",
+    "T1051": "Shared Webroot",
+    "T1052": "Exfiltration Over Physical Medium",
+    "T1052.001": "Exfiltration over USB",
+    "T1053": "Scheduled Task/Job",
+    "T1053.002": "At",
+    "T1053.003": "Cron",
+    "T1053.004": "Launchd",
+    "T1053.005": "Scheduled Task",
+    "T1053.006": "Systemd Timers",
+    "T1053.007": "Container Orchestration Job",
+    "T1055": "Process Injection",
+    "T1055.001": "Dynamic-link Library Injection",
+    "T1055.002": "Portable Executable Injection",
+    "T1055.003": "Thread Execution Hijacking",
+    "T1055.004": "Asynchronous Procedure Call",
+    "T1055.005": "Thread Local Storage",
+    "T1055.008": "Ptrace System Calls",
+    "T1055.009": "Proc Memory",
+    "T1055.011": "Extra Window Memory Injection",
+    "T1055.012": "Process Hollowing",
+    "T1055.013": "Process Doppelg\u00e4nging",
+    "T1055.014": "VDSO Hijacking",
+    "T1055.015": "ListPlanting",
+    "T1056": "Input Capture",
+    "T1056.001": "Keylogging",
+    "T1056.002": "GUI Input Capture",
+    "T1056.003": "Web Portal Capture",
+    "T1056.004": "Credential API Hooking",
+    "T1057": "Process Discovery",
+    "T1059": "Command and Scripting Interpreter",
+    "T1059.001": "PowerShell",
+    "T1059.002": "AppleScript",
+    "T1059.003": "Windows Command Shell",
+    "T1059.004": "Unix Shell",
+    "T1059.005": "Visual Basic",
+    "T1059.006": "Python",
+    "T1059.007": "JavaScript",
+    "T1059.008": "Network Device CLI",
+    "T1061": "Graphical User Interface",
+    "T1062": "Hypervisor",
+    "T1064": "Scripting",
+    "T1068": "Exploitation for Privilege Escalation",
+    "T1069": "Permission Groups Discovery",
+    "T1069.001": "Local Groups",
+    "T1069.002": "Domain Groups",
+    "T1069.003": "Cloud Groups",
+    "T1070": "Indicator Removal",
+    "T1070.001": "Clear Windows Event Logs",
+    "T1070.002": "Clear Linux or Mac System Logs",
+    "T1070.003": "Clear Command History",
+    "T1070.004": "File Deletion",
+    "T1070.005": "Network Share Connection Removal",
+    "T1070.006": "Timestomp",
+    "T1070.007": "Clear Network Connection History and Configurations",
+    "T1070.008": "Clear Mailbox Data",
+    "T1070.009": "Clear Persistence",
+    "T1071": "Application Layer Protocol",
+    "T1071.001": "Web Protocols",
+    "T1071.002": "File Transfer Protocols",
+    "T1071.003": "Mail Protocols",
+    "T1071.004": "DNS",
+    "T1072": "Software Deployment Tools",
+    "T1074": "Data Staged",
+    "T1074.001": "Local Data Staging",
+    "T1074.002": "Remote Data Staging",
+    "T1078": "Valid Accounts",
+    "T1078.001": "Default Accounts",
+    "T1078.002": "Domain Accounts",
+    "T1078.003": "Local Accounts",
+    "T1078.004": "Cloud Accounts",
+    "T1080": "Taint Shared Content",
+    "T1082": "System Information Discovery",
+    "T1083": "File and Directory Discovery",
+    "T1087": "Account Discovery",
+    "T1087.001": "Local Account",
+    "T1087.002": "Domain Account",
+    "T1087.003": "Email Account",
+    "T1087.004": "Cloud Account",
+    "T1090": "Proxy",
+    "T1090.001": "Internal Proxy",
+    "T1090.002": "External Proxy",
+    "T1090.003": "Multi-hop Proxy",
+    "T1090.004": "Domain Fronting",
+    "T1091": "Replication Through Removable Media",
+    "T1092": "Communication Through Removable Media",
+    "T1095": "Non-Application Layer Protocol",
+    "T1098": "Account Manipulation",
+    "T1098.001": "Additional Cloud Credentials",
+    "T1098.002": "Additional Email Delegate Permissions",
+    "T1098.003": "Additional Cloud Roles",
+    "T1098.004": "SSH Authorized Keys",
+    "T1098.005": "Device Registration",
+    "T1102": "Web Service",
+    "T1102.001": "Dead Drop Resolver",
+    "T1102.002": "Bidirectional Communication",
+    "T1102.003": "One-Way Communication",
+    "T1104": "Multi-Stage Channels",
+    "T1105": "Ingress Tool Transfer",
+    "T1106": "Native API",
+    "T1108": "Redundant Access",
+    "T1110": "Brute Force",
+    "T1110.001": "Password Guessing",
+    "T1110.002": "Password Cracking",
+    "T1110.003": "Password Spraying",
+    "T1110.004": "Credential Stuffing",
+    "T1111": "Multi-Factor Authentication Interception",
+    "T1112": "Modify Registry",
+    "T1113": "Screen Capture",
+    "T1114": "Email Collection",
+    "T1114.001": "Local Email Collection",
+    "T1114.002": "Remote Email Collection",
+    "T1114.003": "Email Forwarding Rule",
+    "T1115": "Clipboard Data",
+    "T1119": "Automated Collection",
+    "T1120": "Peripheral Device Discovery",
+    "T1123": "Audio Capture",
+    "T1124": "System Time Discovery",
+    "T1125": "Video Capture",
+    "T1127": "Trusted Developer Utilities Proxy Execution",
+    "T1127.001": "MSBuild",
+    "T1129": "Shared Modules",
+    "T1132": "Data Encoding",
+    "T1132.001": "Standard Encoding",
+    "T1132.002": "Non-Standard Encoding",
+    "T1133": "External Remote Services",
+    "T1134": "Access Token Manipulation",
+    "T1134.001": "Token Impersonation/Theft",
+    "T1134.002": "Create Process with Token",
+    "T1134.003": "Make and Impersonate Token",
+    "T1134.004": "Parent PID Spoofing",
+    "T1134.005": "SID-History Injection",
+    "T1135": "Network Share Discovery",
+    "T1136": "Create Account",
+    "T1136.001": "Local Account",
+    "T1136.002": "Domain Account",
+    "T1136.003": "Cloud Account",
+    "T1137": "Office Application Startup",
+    "T1137.001": "Office Template Macros",
+    "T1137.002": "Office Test",
+    "T1137.003": "Outlook Forms",
+    "T1137.004": "Outlook Home Page",
+    "T1137.005": "Outlook Rules",
+    "T1137.006": "Add-ins",
+    "T1140": "Deobfuscate/Decode Files or Information",
+    "T1149": "LC_MAIN Hijacking",
+    "T1153": "Source",
+    "T1175": "Component Object Model and Distributed COM",
+    "T1176": "Browser Extensions",
+    "T1185": "Browser Session Hijacking",
+    "T1187": "Forced Authentication",
+    "T1189": "Drive-by Compromise",
+    "T1190": "Exploit Public-Facing Application",
+    "T1195": "Supply Chain Compromise",
+    "T1195.001": "Compromise Software Dependencies and Development Tools",
+    "T1195.002": "Compromise Software Supply Chain",
+    "T1195.003": "Compromise Hardware Supply Chain",
+    "T1197": "BITS Jobs",
+    "T1199": "Trusted Relationship",
+    "T1200": "Hardware Additions",
+    "T1201": "Password Policy Discovery",
+    "T1202": "Indirect Command Execution",
+    "T1203": "Exploitation for Client Execution",
+    "T1204": "User Execution",
+    "T1204.001": "Malicious Link",
+    "T1204.002": "Malicious File",
+    "T1204.003": "Malicious Image",
+    "T1205": "Traffic Signaling",
+    "T1205.001": "Port Knocking",
+    "T1205.002": "Socket Filters",
+    "T1207": "Rogue Domain Controller",
+    "T1210": "Exploitation of Remote Services",
+    "T1211": "Exploitation for Defense Evasion",
+    "T1212": "Exploitation for Credential Access",
+    "T1213": "Data from Information Repositories",
+    "T1213.001": "Confluence",
+    "T1213.002": "Sharepoint",
+    "T1213.003": "Code Repositories",
+    "T1216": "System Script Proxy Execution",
+    "T1216.001": "PubPrn",
+    "T1217": "Browser Bookmark Discovery",
+    "T1218": "System Binary Proxy Execution",
+    "T1218.001": "Compiled HTML File",
+    "T1218.002": "Control Panel",
+    "T1218.003": "CMSTP",
+    "T1218.004": "InstallUtil",
+    "T1218.005": "Mshta",
+    "T1218.007": "Msiexec",
+    "T1218.008": "Odbcconf",
+    "T1218.009": "Regsvcs/Regasm",
+    "T1218.010": "Regsvr32",
+    "T1218.011": "Rundll32",
+    "T1218.012": "Verclsid",
+    "T1218.013": "Mavinject",
+    "T1218.014": "MMC",
+    "T1219": "Remote Access Software",
+    "T1220": "XSL Script Processing",
+    "T1221": "Template Injection",
+    "T1222": "File and Directory Permissions Modification",
+    "T1222.001": "Windows File and Directory Permissions Modification",
+    "T1222.002": "Linux and Mac File and Directory Permissions Modification",
+    "T1480": "Execution Guardrails",
+    "T1480.001": "Environmental Keying",
+    "T1482": "Domain Trust Discovery",
+    "T1484": "Domain Policy Modification",
+    "T1484.001": "Group Policy Modification",
+    "T1484.002": "Domain Trust Modification",
+    "T1485": "Data Destruction",
+    "T1486": "Data Encrypted for Impact",
+    "T1489": "Service Stop",
+    "T1490": "Inhibit System Recovery",
+    "T1491": "Defacement",
+    "T1491.001": "Internal Defacement",
+    "T1491.002": "External Defacement",
+    "T1495": "Firmware Corruption",
+    "T1496": "Resource Hijacking",
+    "T1497": "Virtualization/Sandbox Evasion",
+    "T1497.001": "System Checks",
+    "T1497.002": "User Activity Based Checks",
+    "T1497.003": "Time Based Evasion",
+    "T1498": "Network Denial of Service",
+    "T1498.001": "Direct Network Flood",
+    "T1498.002": "Reflection Amplification",
+    "T1499": "Endpoint Denial of Service",
+    "T1499.001": "OS Exhaustion Flood",
+    "T1499.002": "Service Exhaustion Flood",
+    "T1499.003": "Application Exhaustion Flood",
+    "T1499.004": "Application or System Exploitation",
+    "T1505": "Server Software Component",
+    "T1505.001": "SQL Stored Procedures",
+    "T1505.002": "Transport Agent",
+    "T1505.003": "Web Shell",
+    "T1505.004": "IIS Components",
+    "T1505.005": "Terminal Services DLL",
+    "T1518": "Software Discovery",
+    "T1518.001": "Security Software Discovery",
+    "T1525": "Implant Internal Image",
+    "T1526": "Cloud Service Discovery",
+    "T1528": "Steal Application Access Token",
+    "T1529": "System Shutdown/Reboot",
+    "T1530": "Data from Cloud Storage",
+    "T1531": "Account Access Removal",
+    "T1534": "Internal Spearphishing",
+    "T1535": "Unused/Unsupported Cloud Regions",
+    "T1537": "Transfer Data to Cloud Account",
+    "T1538": "Cloud Service Dashboard",
+    "T1539": "Steal Web Session Cookie",
+    "T1542": "Pre-OS Boot",
+    "T1542.001": "System Firmware",
+    "T1542.002": "Component Firmware",
+    "T1542.003": "Bootkit",
+    "T1542.004": "ROMMONkit",
+    "T1542.005": "TFTP Boot",
+    "T1543": "Create or Modify System Process",
+    "T1543.001": "Launch Agent",
+    "T1543.002": "Systemd Service",
+    "T1543.003": "Windows Service",
+    "T1543.004": "Launch Daemon",
+    "T1546": "Event Triggered Execution",
+    "T1546.001": "Change Default File Association",
+    "T1546.002": "Screensaver",
+    "T1546.003": "Windows Management Instrumentation Event Subscription",
+    "T1546.004": "Unix Shell Configuration Modification",
+    "T1546.005": "Trap",
+    "T1546.006": "LC_LOAD_DYLIB Addition",
+    "T1546.007": "Netsh Helper DLL",
+    "T1546.008": "Accessibility Features",
+    "T1546.009": "AppCert DLLs",
+    "T1546.010": "AppInit DLLs",
+    "T1546.011": "Application Shimming",
+    "T1546.012": "Image File Execution Options Injection",
+    "T1546.013": "PowerShell Profile",
+    "T1546.014": "Emond",
+    "T1546.015": "Component Object Model Hijacking",
+    "T1546.016": "Installer Packages",
+    "T1547": "Boot or Logon Autostart Execution",
+    "T1547.001": "Registry Run Keys / Startup Folder",
+    "T1547.002": "Authentication Package",
+    "T1547.003": "Time Providers",
+    "T1547.004": "Winlogon Helper DLL",
+    "T1547.005": "Security Support Provider",
+    "T1547.006": "Kernel Modules and Extensions",
+    "T1547.007": "Re-opened Applications",
+    "T1547.008": "LSASS Driver",
+    "T1547.009": "Shortcut Modification",
+    "T1547.010": "Port Monitors",
+    "T1547.012": "Print Processors",
+    "T1547.013": "XDG Autostart Entries",
+    "T1547.014": "Active Setup",
+    "T1547.015": "Login Items",
+    "T1548": "Abuse Elevation Control Mechanism",
+    "T1548.001": "Setuid and Setgid",
+    "T1548.002": "Bypass User Account Control",
+    "T1548.003": "Sudo and Sudo Caching",
+    "T1548.004": "Elevated Execution with Prompt",
+    "T1550": "Use Alternate Authentication Material",
+    "T1550.001": "Application Access Token",
+    "T1550.002": "Pass the Hash",
+    "T1550.003": "Pass the Ticket",
+    "T1550.004": "Web Session Cookie",
+    "T1552": "Unsecured Credentials",
+    "T1552.001": "Credentials In Files",
+    "T1552.002": "Credentials in Registry",
+    "T1552.003": "Bash History",
+    "T1552.004": "Private Keys",
+    "T1552.005": "Cloud Instance Metadata API",
+    "T1552.006": "Group Policy Preferences",
+    "T1552.007": "Container API",
+    "T1553": "Subvert Trust Controls",
+    "T1553.001": "Gatekeeper Bypass",
+    "T1553.002": "Code Signing",
+    "T1553.003": "SIP and Trust Provider Hijacking",
+    "T1553.004": "Install Root Certificate",
+    "T1553.005": "Mark-of-the-Web Bypass",
+    "T1553.006": "Code Signing Policy Modification",
+    "T1554": "Compromise Client Software Binary",
+    "T1555": "Credentials from Password Stores",
+    "T1555.001": "Keychain",
+    "T1555.002": "Securityd Memory",
+    "T1555.003": "Credentials from Web Browsers",
+    "T1555.004": "Windows Credential Manager",
+    "T1555.005": "Password Managers",
+    "T1556": "Modify Authentication Process",
+    "T1556.001": "Domain Controller Authentication",
+    "T1556.002": "Password Filter DLL",
+    "T1556.003": "Pluggable Authentication Modules",
+    "T1556.004": "Network Device Authentication",
+    "T1556.005": "Reversible Encryption",
+    "T1556.006": "Multi-Factor Authentication",
+    "T1556.007": "Hybrid Identity",
+    "T1557": "Adversary-in-the-Middle",
+    "T1557.001": "LLMNR/NBT-NS Poisoning and SMB Relay",
+    "T1557.002": "ARP Cache Poisoning",
+    "T1557.003": "DHCP Spoofing",
+    "T1558": "Steal or Forge Kerberos Tickets",
+    "T1558.001": "Golden Ticket",
+    "T1558.002": "Silver Ticket",
+    "T1558.003": "Kerberoasting",
+    "T1558.004": "AS-REP Roasting",
+    "T1559": "Inter-Process Communication",
+    "T1559.001": "Component Object Model",
+    "T1559.002": "Dynamic Data Exchange",
+    "T1559.003": "XPC Services",
+    "T1560": "Archive Collected Data",
+    "T1560.001": "Archive via Utility",
+    "T1560.002": "Archive via Library",
+    "T1560.003": "Archive via Custom Method",
+    "T1561": "Disk Wipe",
+    "T1561.001": "Disk Content Wipe",
+    "T1561.002": "Disk Structure Wipe",
+    "T1562": "Impair Defenses",
+    "T1562.001": "Disable or Modify Tools",
+    "T1562.002": "Disable Windows Event Logging",
+    "T1562.003": "Impair Command History Logging",
+    "T1562.004": "Disable or Modify System Firewall",
+    "T1562.006": "Indicator Blocking",
+    "T1562.007": "Disable or Modify Cloud Firewall",
+    "T1562.008": "Disable Cloud Logs",
+    "T1562.009": "Safe Mode Boot",
+    "T1562.010": "Downgrade Attack",
+    "T1563": "Remote Service Session Hijacking",
+    "T1563.001": "SSH Hijacking",
+    "T1563.002": "RDP Hijacking",
+    "T1564": "Hide Artifacts",
+    "T1564.001": "Hidden Files and Directories",
+    "T1564.002": "Hidden Users",
+    "T1564.003": "Hidden Window",
+    "T1564.004": "NTFS File Attributes",
+    "T1564.005": "Hidden File System",
+    "T1564.006": "Run Virtual Instance",
+    "T1564.007": "VBA Stomping",
+    "T1564.008": "Email Hiding Rules",
+    "T1564.009": "Resource Forking",
+    "T1564.010": "Process Argument Spoofing",
+    "T1565": "Data Manipulation",
+    "T1565.001": "Stored Data Manipulation",
+    "T1565.002": "Transmitted Data Manipulation",
+    "T1565.003": "Runtime Data Manipulation",
+    "T1566": "Phishing",
+    "T1566.001": "Spearphishing Attachment",
+    "T1566.002": "Spearphishing Link",
+    "T1566.003": "Spearphishing via Service",
+    "T1567": "Exfiltration Over Web Service",
+    "T1567.001": "Exfiltration to Code Repository",
+    "T1567.002": "Exfiltration to Cloud Storage",
+    "T1568": "Dynamic Resolution",
+    "T1568.001": "Fast Flux DNS",
+    "T1568.002": "Domain Generation Algorithms",
+    "T1568.003": "DNS Calculation",
+    "T1569": "System Services",
+    "T1569.001": "Launchctl",
+    "T1569.002": "Service Execution",
+    "T1570": "Lateral Tool Transfer",
+    "T1571": "Non-Standard Port",
+    "T1572": "Protocol Tunneling",
+    "T1573": "Encrypted Channel",
+    "T1573.001": "Symmetric Cryptography",
+    "T1573.002": "Asymmetric Cryptography",
+    "T1574": "Hijack Execution Flow",
+    "T1574.001": "DLL Search Order Hijacking",
+    "T1574.002": "DLL Side-Loading",
+    "T1574.004": "Dylib Hijacking",
+    "T1574.005": "Executable Installer File Permissions Weakness",
+    "T1574.006": "Dynamic Linker Hijacking",
+    "T1574.007": "Path Interception by PATH Environment Variable",
+    "T1574.008": "Path Interception by Search Order Hijacking",
+    "T1574.009": "Path Interception by Unquoted Path",
+    "T1574.010": "Services File Permissions Weakness",
+    "T1574.011": "Services Registry Permissions Weakness",
+    "T1574.012": "COR_PROFILER",
+    "T1574.013": "KernelCallbackTable",
+    "T1578": "Modify Cloud Compute Infrastructure",
+    "T1578.001": "Create Snapshot",
+    "T1578.002": "Create Cloud Instance",
+    "T1578.003": "Delete Cloud Instance",
+    "T1578.004": "Revert Cloud Instance",
+    "T1580": "Cloud Infrastructure Discovery",
+    "T1583": "Acquire Infrastructure",
+    "T1583.001": "Domains",
+    "T1583.002": "DNS Server",
+    "T1583.003": "Virtual Private Server",
+    "T1583.004": "Server",
+    "T1583.005": "Botnet",
+    "T1583.006": "Web Services",
+    "T1583.007": "Serverless",
+    "T1584": "Compromise Infrastructure",
+    "T1584.001": "Domains",
+    "T1584.002": "DNS Server",
+    "T1584.003": "Virtual Private Server",
+    "T1584.004": "Server",
+    "T1584.005": "Botnet",
+    "T1584.006": "Web Services",
+    "T1584.007": "Serverless",
+    "T1585": "Establish Accounts",
+    "T1585.001": "Social Media Accounts",
+    "T1585.002": "Email Accounts",
+    "T1585.003": "Cloud Accounts",
+    "T1586": "Compromise Accounts",
+    "T1586.001": "Social Media Accounts",
+    "T1586.002": "Email Accounts",
+    "T1586.003": "Cloud Accounts",
+    "T1587": "Develop Capabilities",
+    "T1587.001": "Malware",
+    "T1587.002": "Code Signing Certificates",
+    "T1587.003": "Digital Certificates",
+    "T1587.004": "Exploits",
+    "T1588": "Obtain Capabilities",
+    "T1588.001": "Malware",
+    "T1588.002": "Tool",
+    "T1588.003": "Code Signing Certificates",
+    "T1588.004": "Digital Certificates",
+    "T1588.005": "Exploits",
+    "T1588.006": "Vulnerabilities",
+    "T1589": "Gather Victim Identity Information",
+    "T1589.001": "Credentials",
+    "T1589.002": "Email Addresses",
+    "T1589.003": "Employee Names",
+    "T1590": "Gather Victim Network Information",
+    "T1590.001": "Domain Properties",
+    "T1590.002": "DNS",
+    "T1590.003": "Network Trust Dependencies",
+    "T1590.004": "Network Topology",
+    "T1590.005": "IP Addresses",
+    "T1590.006": "Network Security Appliances",
+    "T1591": "Gather Victim Org Information",
+    "T1591.001": "Determine Physical Locations",
+    "T1591.002": "Business Relationships",
+    "T1591.003": "Identify Business Tempo",
+    "T1591.004": "Identify Roles",
+    "T1592": "Gather Victim Host Information",
+    "T1592.001": "Hardware",
+    "T1592.002": "Software",
+    "T1592.003": "Firmware",
+    "T1592.004": "Client Configurations",
+    "T1593": "Search Open Websites/Domains",
+    "T1593.001": "Social Media",
+    "T1593.002": "Search Engines",
+    "T1593.003": "Code Repositories",
+    "T1594": "Search Victim-Owned Websites",
+    "T1595": "Active Scanning",
+    "T1595.001": "Scanning IP Blocks",
+    "T1595.002": "Vulnerability Scanning",
+    "T1595.003": "Wordlist Scanning",
+    "T1596": "Search Open Technical Databases",
+    "T1596.001": "DNS/Passive DNS",
+    "T1596.002": "WHOIS",
+    "T1596.003": "Digital Certificates",
+    "T1596.004": "CDNs",
+    "T1596.005": "Scan Databases",
+    "T1597": "Search Closed Sources",
+    "T1597.001": "Threat Intel Vendors",
+    "T1597.002": "Purchase Technical Data",
+    "T1598": "Phishing for Information",
+    "T1598.001": "Spearphishing Service",
+    "T1598.002": "Spearphishing Attachment",
+    "T1598.003": "Spearphishing Link",
+    "T1599": "Network Boundary Bridging",
+    "T1599.001": "Network Address Translation Traversal",
+    "T1600": "Weaken Encryption",
+    "T1600.001": "Reduce Key Space",
+    "T1600.002": "Disable Crypto Hardware",
+    "T1601": "Modify System Image",
+    "T1601.001": "Patch System Image",
+    "T1601.002": "Downgrade System Image",
+    "T1602": "Data from Configuration Repository",
+    "T1602.001": "SNMP (MIB Dump)",
+    "T1602.002": "Network Device Configuration Dump",
+    "T1606": "Forge Web Credentials",
+    "T1606.001": "Web Cookies",
+    "T1606.002": "SAML Tokens",
+    "T1608": "Stage Capabilities",
+    "T1608.001": "Upload Malware",
+    "T1608.002": "Upload Tool",
+    "T1608.003": "Install Digital Certificate",
+    "T1608.004": "Drive-by Target",
+    "T1608.005": "Link Target",
+    "T1608.006": "SEO Poisoning",
+    "T1609": "Container Administration Command",
+    "T1610": "Deploy Container",
+    "T1611": "Escape to Host",
+    "T1612": "Build Image on Host",
+    "T1613": "Container and Resource Discovery",
+    "T1614": "System Location Discovery",
+    "T1614.001": "System Language Discovery",
+    "T1615": "Group Policy Discovery",
+    "T1619": "Cloud Storage Object Discovery",
+    "T1620": "Reflective Code Loading",
+    "T1621": "Multi-Factor Authentication Request Generation",
+    "T1622": "Debugger Evasion",
+    "T1647": "Plist File Modification",
+    "T1648": "Serverless Execution",
+    "T1649": "Steal or Forge Authentication Certificates"
+  },
+  "version": "12.1"
+}

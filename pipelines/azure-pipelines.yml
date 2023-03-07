@@ -1,0 +1,48 @@
+name: $(TeamProject)_$(SourceBranch)_$(Date:yyyyMMdd)_$(BuildId)
+trigger:
+- master
+
+stages:
+  - stage: verify
+    displayName: Verify Syntax
+    condition: always()
+    pool:
+      vmImage: 'ubuntu-22.04'
+    jobs:
+    - job: verify_syntax
+      condition: always()
+      steps:
+      - checkout: self
+
+      - script: |
+          pip3 install -r src/requirements.txt
+        displayName: 'Install requirements'
+      - script: |
+          set -e
+          git clone https://github.com/FalconForceTeam/KQLAnalyzer
+          cd KQLAnalyzer
+          dotnet restore
+          dotnet build
+          dotnet run --project=src/KQLAnalyzer.csproj -- --rest </dev/null >dotnet-server-log.txt 2>&1 &
+
+          echo "Waiting for language server to start..."
+
+          attempt_counter=0
+          max_attempts=20
+
+          until $(curl --output /dev/null --silent --fail http://127.0.0.1:8000/api/environments); do
+              if [ ${attempt_counter} -eq ${max_attempts} ];then
+                echo "Max attempts reached"
+                exit 1
+              fi
+
+              printf '.'
+              attempt_counter=$(($attempt_counter+1))
+              sleep 1
+          done
+        displayName: 'Start language server'
+
+      - script: |
+          set -e
+          python3 src/verify.py usecases --analyzer-url=http://127.0.0.1:8000/api/analyze
+        displayName: 'Validate syntax'

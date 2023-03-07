@@ -1,0 +1,62 @@
+name: ADCS Certificate Requested via Web Interface
+id: 0xFF-0294-ADCS_Certificate_Requested_via_Web_Interface
+os_family:
+  - WindowsServer
+tags:
+  - ADCS
+  - ActiveDirectory
+  - Webserver
+fp_rate: Medium
+severity: Medium
+attack:
+  - {tactic: 'TA0006', technique: T1556}
+data_sources:
+  - provider: AzureMonitor(IIS)
+    event_id: W3CIISLog
+    table_name: W3CIISLog
+    attack_data_source: Application Log
+    attack_data_component: Application Log Content
+permission_required: User
+technical_description: >
+  This query uses IIS logs to identify certificates requested via the web interface.
+  In the first step, ADCS servers are listed by looking for an ADCS specific Uri Stem in the IIS logs events.
+  A hard-coded ADCS server list can also be provided as client variable instead (adcs_server_list).
+  In a second step, requests to these servers done via the web interface are identified by looking for POST to a '/certsrv/certfnsh.asp' Uri.
+description: >
+  This query looks for ADCS certificates being requested via the web interface.
+  This technique can be used by an attacker to modify authentication processes, in order to evade detection or elevate privileges.
+considerations: |
+  This action is not malicious on its own, but should be quite rare. This event must be correlated with other events.
+false_positives: >
+  This rule will create noise if the web interface is a common way to request certificates in a given environment.
+blindspots: >
+  None expected.
+response_plan: >
+  investigate whether the affected user requested the certificate for a valid business purpose.
+references:
+  - https://thesecmaster.com/how-to-request-a-certificate-from-windows-adcs/
+change_log:
+  - {version: '1.1', date: '2022-07-06', impact: minor, message: Modified query to use ingestion_time() instead of TimeGenerated.}
+  - {version: '1.0', date: '2022-06-08', impact: major, message: Initial version.}
+detection_query:
+  language: Kusto
+  platform: Sentinel
+  deployment_variables:
+    query_frequency: PT1H
+    entity_mapping:
+      - Host:
+          FullName: Computer
+      - Account:
+          Name: csUserName
+  query: |
+    let timeframe = 2*1h;
+    // List ADCS servers.
+    let ADCSsrv = dynamic(["ADCS01.test.lab", "ADCS02.test.lab"]);
+    // Cert request via web interface.
+    W3CIISLog
+    | where ingestion_time() >= ago(timeframe)
+    | where Computer in~ (ADCSsrv)
+    | where not(csMethod in~ ("GET","HEAD"))
+    | where csUriStem =~ "/certsrv/certfnsh.asp"
+    // Begin client-specific filter.
+    // End client-specific filter.

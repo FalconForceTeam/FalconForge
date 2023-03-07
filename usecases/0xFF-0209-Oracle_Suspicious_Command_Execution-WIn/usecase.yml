@@ -1,0 +1,57 @@
+name: Oracle Suspicious Command Execution
+id: 0xFF-0209-Oracle_Suspicious_Command_Execution-WIn
+tags:
+  - BoosterPack
+  - SuspiciousBehavior
+os_family:
+  - WindowsEndpoint
+  - WindowsServer
+fp_rate: Low
+severity: Medium
+attack:
+  - {tactic: 'TA0008', technique:  T1210}
+  - {tactic: 'TA0004', technique:  T1611}
+data_sources:
+  - provider: MicrosoftThreatProtection
+    event_id: ProcessCreated
+    table_name: DeviceProcessEvents
+    attack_data_source: Process
+    attack_data_component: Process Creation
+permission_required: User
+technical_description: >
+  This query searches process creation events that are indicative of an attacker spawning OS commands from an Oracle database.
+description: >
+  Attackers can use database systems such as Oracle to laterally move through the network by using command execution functionality in these databases.
+considerations: >
+  None.
+false_positives: >
+  Some legitimate Oracle plugins will also perform command execution. Such plugins will have to be filtered.
+blindspots: >
+  None.
+response_plan: >
+  Investigate the source of the command being executed. This could be indicative of an attacker attempting to perform lateral movement.
+references:
+  - https://github.com/0xdea/exploits/blob/master/oracle/raptor_oraexec.sql
+change_log:
+  - {version: '1.2', date: '2022-02-22', impact: minor, message: 'Use ingestion_time for event selection and include de-duplication logic.' }
+  - {version: '1.1', date: '2022-01-18', impact: minor, message: Added werfault to filter.}
+  - {version: '1.0', date: '2021-11-09', impact: major, message: Initial version.}
+detection_query:
+  language: Kusto
+  platform: M365 Security
+  alternate_platforms:
+    - Sentinel
+  deployment_variables:
+    query_frequency: PT1H
+    entity_mapping:
+      machine: DeviceId
+      user: InitiatingProcessAccountUpn
+  query: |
+    let timeframe = 2*1h;
+    DeviceProcessEvents
+    | where ingestion_time() >= ago(timeframe)
+    | where InitiatingProcessFileName =~ "oracle.exe"
+    | where not(FileName in~ ("conhost.exe", "oradim.exe"))
+    | where not(FileName =~ "WerFault.exe" and ProcessCommandLine contains tostring(InitiatingProcessId))
+    // Begin client-specific filter.
+    // End client-specific filter.

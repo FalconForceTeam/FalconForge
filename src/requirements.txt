@@ -1,0 +1,5 @@
+pyyaml
+jsonschema>=3.2.0
+dotmap
+requests
+isodate

@@ -1,0 +1,71 @@
+name: AWS Discovery Commands Executed from Instance Profile
+id: 0xFF-0239-Discovery_Commands_Executed_from_Instance_Profile-AWS
+tags:
+  - AWS
+  - SuspiciousBehavior
+os_family:
+  - N/A
+fp_rate: Low
+severity: Medium
+attack:
+  - {tactic: 'TA0007', technique: T1087, sub_technique: "004"}
+  - {tactic: 'TA0007', technique: T1526}
+  - {tactic: 'TA0003', technique: T1078, sub_technique: "004"}
+data_sources:
+  - provider: AWS
+    event_id: ListRoles
+    table_name: AWSCloudTrail
+    attack_data_source: Application Log
+    attack_data_component: Application Log Content
+  - provider: AWS
+    event_id: GetAccountAuthorizationDetails
+    table_name: AWSCloudTrail
+    attack_data_source: Application Log
+    attack_data_component: Application Log Content
+  - provider: AWS
+    event_id: ListUsers
+    table_name: AWSCloudTrail
+    attack_data_source: Application Log
+    attack_data_component: Application Log Content
+permission_required: User
+technical_description: >
+  This query searches for certain discovery commands such as `ListRoles` and `ListUsers` being executed using credentials originating from an instance profile.
+description: >
+  When an attacker gains access to an EC2 instance in AWS, the metadata of that instance can be extracted via the metadata endpoint. This metadata can include access credentials
+  linked to the instance via instance profiles. The attacker can extract these credentials and use them to access other services in AWS.
+considerations: >
+  None.
+false_positives: >
+  There might be EC2 machines that issue these discovery commands for valid business purposes. These will have to be filtered.
+blindspots: >
+  The detection relies on the `UserIdentityPrincipalid` containing `:i-` to detect access by credentials originating from an instance profile.
+  An attacker might be able to bypass this by manually obtaining credentials.
+response_plan: >
+  The EC2 instance ID is available in the `UserIdentityPrincipalid` field. Confirm if the EC2 instance legitimately issued these discovery commands.
+references:
+  - https://github.com/DataDog/stratus-red-team
+  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html
+  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
+change_log:
+  - {version: '1.2', date: '2022-08-25', impact: minor, message: Entity mapping added.}
+  - {version: '1.1', date: '2022-02-22', impact: minor, message: 'Use ingestion_time for event selection and include de-duplication logic.' }
+  - {version: '1.0', date: '2022-02-02', impact: major, message: Initial version.}
+detection_query:
+  language: Kusto
+  platform: Sentinel
+  deployment_variables:
+    query_frequency: PT1H
+    query_period: PT2H
+    entity_mapping:
+      - IP:
+          Address: SourceIpAddress
+      - Account:
+          FullName: UserIdentityPrincipalid
+  query: |
+    let timeframe = 2*1h;
+    AWSCloudTrail
+    | where ingestion_time() >= ago(timeframe)
+    | where UserIdentityPrincipalid contains_cs ":i-"
+    | where EventName in ("ListRoles","GetAccountAuthorizationDetails","ListUsers")
+    // Begin client-specific filter.
+    // End client-specific filter.

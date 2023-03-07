@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        // ./ is relative to start of the repo
+        "./docs/schemas/usecase_schema.json": ["*/usecase.yml"],
+    }
+}
